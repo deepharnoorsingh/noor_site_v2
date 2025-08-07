@@ -12,7 +12,7 @@
   <header>
   <div class="wrap nav">
     <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Noor Projects Inc. logo" />
+      <img src="images/logo-green.png" alt="Noor Projects Inc. logo - Green" />
     </a>
     <nav>
       <a href="index.html">Home</a>
@@ -26,46 +26,53 @@
   </div>
 </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Landscaping: Sod, Rock, Mulch, Pavers</h1>
-      <p class="lead">Sod and rock installs, mulch, edging, and paver patios — clean lines, proper prep, and tidy finish.</p>
-      <p style="margin-top:18px">
-        <a class="btn primary" href="#contact">Get a quote</a>
-        <a class="btn" href="gallery.html" style="margin-left:10px">View gallery</a>
-      </p>
-    </section>
-
-    <section>
-      <h2>Landscaping</h2>
-      <p>Fast, clean yard upgrades: sod, rock, mulch, and paver installs that boost curb appeal.</p>
-      <div class="grid" style="margin-top:16px">
-        <div class="card"><h3>Sod</h3><ul class="check">
-          <li>Grade & topsoil prep</li><li>Fresh sod install</li><li>Aftercare guidance</li></ul></div>
-        <div class="card"><h3>Rock & Mulch</h3><ul class="check">
-          <li>Weed barrier fabric</li><li>Clean borders & edging</li><li>Low‑maintenance design</li></ul></div>
-        <div class="card"><h3>Pavers & Patios</h3><ul class="check">
-          <li>Base prep & compaction</li><li>Walkways & pads</li><li>Polymeric sand finish</li></ul></div>
-      </div>
-      <h2 style="margin-top:28px">Landscaping Gallery</h2>
-      <div class="gallery" style="margin-top:16px">
-        <a href="images/landscaping-1.png" data-lightbox="land"><img src="images/landscaping-1.png" alt=""></a>
-        <a href="images/landscaping-2.png" data-lightbox="land"><img src="images/landscaping-2.png" alt=""></a>
-        <a href="images/landscaping-3.png" data-lightbox="land"><img src="images/landscaping-3.png" alt=""></a>
+  <main>
+    <section class="hero section-full">
+      <div class="hero-bg"></div>
+      <div class="wrap">
+        <h1>Landscaping: Sod, Rock, Mulch, Pavers</h1>
+        <p class="lead">Sod and rock installs, mulch, edging, and paver patios — clean lines, proper prep, and tidy finish.</p>
+        <p class="cta">
+          <a class="btn primary" href="#contact">Get a quote</a>
+          <a class="btn" href="gallery.html">View gallery</a>
+        </p>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Get a free estimate. We’ll reply within one business day.</p>
-      <form onsubmit="return sendMessage(event)">
-        <label>Name<input required name="name" /></label>
-        <label>Email<input required type="email" name="email" /></label>
-        <label>Phone<input name="phone" /></label>
-        <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
-        <button class="btn primary" type="submit">Send</button>
-        <small id="status"></small>
-      </form>
+    <section class="section-alt">
+      <div class="wrap">
+        <h2>Landscaping</h2>
+        <p>Fast, clean yard upgrades: sod, rock, mulch, and paver installs that boost curb appeal.</p>
+        <div class="grid" style="margin-top:16px">
+          <div class="card"><h3>Sod</h3><ul class="check">
+            <li>Grade & topsoil prep</li><li>Fresh sod install</li><li>Aftercare guidance</li></ul></div>
+          <div class="card"><h3>Rock & Mulch</h3><ul class="check">
+            <li>Weed barrier fabric</li><li>Clean borders & edging</li><li>Low‑maintenance design</li></ul></div>
+          <div class="card"><h3>Pavers & Patios</h3><ul class="check">
+            <li>Base prep & compaction</li><li>Walkways & pads</li><li>Polymeric sand finish</li></ul></div>
+        </div>
+        <h2 style="margin-top:28px">Landscaping Gallery</h2>
+        <div class="gallery" style="margin-top:16px">
+          <a href="images/landscaping-1.png" data-lightbox="land"><img src="images/landscaping-1.png" alt=""></a>
+          <a href="images/landscaping-2.png" data-lightbox="land"><img src="images/landscaping-2.png" alt=""></a>
+          <a href="images/landscaping-3.png" data-lightbox="land"><img src="images/landscaping-3.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-band">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Get a free estimate. We’ll reply within one business day.</p>
+        <form onsubmit="return sendMessage(event)">
+          <label>Name<input required name="name" /></label>
+          <label>Email<input required type="email" name="email" /></label>
+          <label>Phone<input name="phone" /></label>
+          <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
+          <button class="btn primary" type="submit">Send</button>
+          <small id="status"></small>
+        </form>
+      </div>
     </section>
   </main>
 

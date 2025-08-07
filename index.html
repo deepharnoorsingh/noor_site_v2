@@ -26,74 +26,85 @@
   </div>
 </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Renovations, Landscaping & Exteriors in Calgary</h1>
-      <p class="lead">Basements and renovations, clean landscaping installs, and exterior upgrades done to standard — on time and on budget.</p>
-      <p style="margin-top:18px">
-        <a class="btn primary" href="#contact">Get a quote</a>
-        <a class="btn" href="gallery.html" style="margin-left:10px">View gallery</a>
-      </p>
+  <main>
+    <section class="hero section-full">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <h1>Renovations, Landscaping & Exteriors in Calgary</h1>
+    <p class="lead">Basements and renovations, clean landscaping installs, and exterior upgrades done to standard — on time and on budget.</p>
+    <p class="cta">
+      <a class="btn primary" href="#contact">Get a quote</a>
+      <a class="btn" href="gallery.html">View gallery</a>
+    </p>
+  </div>
+</section>
+
+    <section id="services" class="section-alt">
+      <div class="wrap">
+        <h2>Our Services</h2>
+        <div class="grid" style="margin-top:16px">
+          <div class="card"><h3>Renovations</h3><p>Bathrooms, kitchens, and full‑home updates with durable finishes.</p><p><a class="btn" href="renovations.html">Explore Renovations</a></p></div>
+          <div class="card"><h3>Landscaping</h3><p>Sod, rock, mulch, edging, and paver installs — clean and fast.</p><p><a class="btn" href="landscaping.html">Explore Landscaping</a></p></div>
+          <div class="card"><h3>Exteriors</h3><p>Siding, soffit, fascia, gutters, and exterior paint with tidy cleanup.</p><p><a class="btn" href="exteriors.html">Explore Exteriors</a></p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section-band">
+      <div class="wrap">
+        <h2>Featured Projects</h2>
+        <div class="gallery" style="margin-top:16px">
+          <a href="images/renovations-1.png" data-lightbox="feat"><img src="images/renovations-1.png" alt="Kitchen refresh"></a>
+          <a href="images/landscaping-1.png" data-lightbox="feat"><img src="images/landscaping-1.png" alt="Sod install"></a>
+          <a href="images/exteriors-1.png" data-lightbox="feat"><img src="images/exteriors-1.png" alt="Siding update"></a>
+        </div>
+      </div>
+    </section>
+    <section class="section-alt">
+      <div class="wrap">
+        <h2>Latest Blog</h2>
+        <div class="post-list" style="margin-top:16px">
+          <article class="post-card">
+            <a class="thumb" href="blog-post-1.html"><img src="images/landscaping-2.png" alt=""></a>
+            <div class="content">
+              <h3><a href="blog-post-1.html">Sod Aftercare: 7-Day Success Checklist</a></h3>
+              <p class="lead">Watering, first mow, and soil tips to lock in that new‑lawn look.</p>
+              <a href="blog-post-1.html">Read more →</a>
+            </div>
+          </article>
+          <article class="post-card">
+            <a class="thumb" href="blog-post-2.html"><img src="images/renovations-2.png" alt=""></a>
+            <div class="content">
+              <h3><a href="blog-post-2.html">Bathroom Reno Timeline: What to Expect</a></h3>
+              <p class="lead">A step‑by‑step guide from demo to final caulk line.</p>
+              <a href="blog-post-2.html">Read more →</a>
+            </div>
+          </article>
+          <article class="post-card">
+            <a class="thumb" href="blog-post-3.html"><img src="images/exteriors-2.png" alt=""></a>
+            <div class="content">
+              <h3><a href="blog-post-3.html">Exterior Paint: Prep That Actually Lasts</a></h3>
+              <p class="lead">Prep is 80% of a great exterior finish. Here’s the checklist.</p>
+              <a href="blog-post-3.html">Read more →</a>
+            </div>
+          </article>
+        </div>
+        <p style="margin-top:12px"><a class="btn" href="blog.html">View all posts</a></p>
+      </div>
     </section>
 
-    <section id="services">
-      <h2>Our Services</h2>
-      <div class="grid" style="margin-top:16px">
-        <div class="card"><h3>Renovations</h3><p>Bathrooms, kitchens, and full‑home updates with durable finishes.</p><p><a class="btn" href="renovations.html">Explore Renovations</a></p></div>
-        <div class="card"><h3>Landscaping</h3><p>Sod, rock, mulch, edging, and paver installs — clean and fast.</p><p><a class="btn" href="landscaping.html">Explore Landscaping</a></p></div>
-        <div class="card"><h3>Exteriors</h3><p>Siding, soffit, fascia, gutters, and exterior paint with tidy cleanup.</p><p><a class="btn" href="exteriors.html">Explore Exteriors</a></p></div>
+    <section id="contact" class="section-band">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Get a free estimate. We’ll reply within one business day.</p>
+        <form onsubmit="return sendMessage(event)">
+          <label>Name<input required name="name" /></label>
+          <label>Email<input required type="email" name="email" /></label>
+          <label>Phone<input name="phone" /></label>
+          <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
+          <button class="btn primary" type="submit">Send</button>
+          <small id="status"></small>
+        </form>
       </div>
-    </section>
-    <section>
-      <h2>Featured Projects</h2>
-      <div class="gallery" style="margin-top:16px">
-        <a href="images/renovations-1.png" data-lightbox="feat"><img src="images/renovations-1.png" alt="Kitchen refresh"></a>
-        <a href="images/landscaping-1.png" data-lightbox="feat"><img src="images/landscaping-1.png" alt="Sod install"></a>
-        <a href="images/exteriors-1.png" data-lightbox="feat"><img src="images/exteriors-1.png" alt="Siding update"></a>
-      </div>
-    </section>
-    <section>
-      <h2>Latest Blog</h2>
-      <div class="post-list" style="margin-top:16px">
-        <article class="post-card">
-          <a class="thumb" href="blog-post-1.html"><img src="images/landscaping-2.png" alt=""></a>
-          <div class="content">
-            <h3><a href="blog-post-1.html">Sod Aftercare: 7-Day Success Checklist</a></h3>
-            <p class="lead">Watering, first mow, and soil tips to lock in that new‑lawn look.</p>
-            <a href="blog-post-1.html">Read more →</a>
-          </div>
-        </article>
-        <article class="post-card">
-          <a class="thumb" href="blog-post-2.html"><img src="images/renovations-2.png" alt=""></a>
-          <div class="content">
-            <h3><a href="blog-post-2.html">Bathroom Reno Timeline: What to Expect</a></h3>
-            <p class="lead">A step‑by‑step guide from demo to final caulk line.</p>
-            <a href="blog-post-2.html">Read more →</a>
-          </div>
-        </article>
-        <article class="post-card">
-          <a class="thumb" href="blog-post-3.html"><img src="images/exteriors-2.png" alt=""></a>
-          <div class="content">
-            <h3><a href="blog-post-3.html">Exterior Paint: Prep That Actually Lasts</a></h3>
-            <p class="lead">Prep is 80% of a great exterior finish. Here’s the checklist.</p>
-            <a href="blog-post-3.html">Read more →</a>
-          </div>
-        </article>
-      </div>
-      <p style="margin-top:12px"><a class="btn" href="blog.html">View all posts</a></p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Get a free estimate. We’ll reply within one business day.</p>
-      <form onsubmit="return sendMessage(event)">
-        <label>Name<input required name="name" /></label>
-        <label>Email<input required type="email" name="email" /></label>
-        <label>Phone<input name="phone" /></label>
-        <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
-        <button class="btn primary" type="submit">Send</button>
-        <small id="status"></small>
-      </form>
     </section>
   </main>
 
