@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <header>
+<header>
   <div class="wrap nav">
     <a href="index.html" class="logo">
       <img src="images/logo.png" alt="Noor Projects Inc. logo" />
@@ -26,17 +26,21 @@
   </div>
 </header>
 
-  <main class="wrap">
-    <section class="hero">
+<main>
+  <section class="hero section-full">
+    <div class="hero-bg"></div>
+    <div class="wrap">
       <h1>Exteriors: Siding, Paint, Gutters</h1>
       <p class="lead">Siding and exterior upgrades done to standard, with careful prep and tidy finishes.</p>
-      <p style="margin-top:18px">
+      <p class="cta">
         <a class="btn primary" href="#contact">Get a quote</a>
-        <a class="btn" href="gallery.html" style="margin-left:10px">View gallery</a>
+        <a class="btn" href="gallery.html">View gallery</a>
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <section class="section-alt">
+    <div class="wrap">
       <h2>Exteriors</h2>
       <p>Siding, soffit, fascia, gutters, exterior paint, and small repairs with tidy cleanup and durable results.</p>
       <div class="grid" style="margin-top:16px">
@@ -45,7 +49,7 @@
         <div class="card"><h3>Gutters & Eaves</h3><ul class="check">
           <li>Install & repairs</li><li>Downspouts & guards</li><li>Sealing & caulking</li></ul></div>
         <div class="card"><h3>Exterior Paint</h3><ul class="check">
-          <li>Prep, prime, coat</li><li>Weather‑resistant finishes</li><li>Clean lines & protection</li></ul></div>
+          <li>Prep, prime, coat</li><li>Weather-resistant finishes</li><li>Clean lines & protection</li></ul></div>
       </div>
       <h2 style="margin-top:28px">Exteriors Gallery</h2>
       <div class="gallery" style="margin-top:16px">
@@ -53,9 +57,11 @@
         <a href="images/exteriors-2.png" data-lightbox="ext"><img src="images/exteriors-2.png" alt=""></a>
         <a href="images/exteriors-3.png" data-lightbox="ext"><img src="images/exteriors-3.png" alt=""></a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
+  <section id="contact" class="section-band">
+    <div class="wrap">
       <h2>Contact</h2>
       <p>Get a free estimate. We’ll reply within one business day.</p>
       <form onsubmit="return sendMessage(event)">
@@ -66,15 +72,16 @@
         <button class="btn primary" type="submit">Send</button>
         <small id="status"></small>
       </form>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <small>© Noor Projects Inc. • Calgary, AB</small>
     </div>
-  </footer>
-  <script src="script.js"></script>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <small>© Noor Projects Inc. • Calgary, AB</small>
+  </div>
+</footer>
+<script src="script.js"></script>
 
 </body>
 </html>

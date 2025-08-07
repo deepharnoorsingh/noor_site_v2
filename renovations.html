@@ -26,46 +26,53 @@
   </div>
 </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Renovations & Basement Development</h1>
-      <p class="lead">From bathrooms and kitchens to legal basement suites, we deliver functional layouts and durable finishes.</p>
-      <p style="margin-top:18px">
-        <a class="btn primary" href="#contact">Get a quote</a>
-        <a class="btn" href="gallery.html" style="margin-left:10px">View gallery</a>
-      </p>
-    </section>
-
-    <section>
-      <h2>Renovations</h2>
-      <p>We handle kitchens, bathrooms, basements, and full‑home refreshes with clean finishes and clear timelines.</p>
-      <div class="grid" style="margin-top:16px">
-        <div class="card"><h3>Basements</h3><ul class="check">
-          <li>Legal/secondary suites</li><li>Framing, drywall, paint</li><li>Flooring & trims</li></ul></div>
-        <div class="card"><h3>Bathrooms</h3><ul class="check">
-          <li>Tile & waterproofing</li><li>Vanities & fixtures</li><li>Ventilation & lighting</li></ul></div>
-        <div class="card"><h3>Kitchens</h3><ul class="check">
-          <li>Cabinets & countertops</li><li>Backsplash & flooring</li><li>Appliance coordination</li></ul></div>
-      </div>
-      <h2 style="margin-top:28px">Renovation Gallery</h2>
-      <div class="gallery" style="margin-top:16px">
-        <a href="images/renovations-1.png" data-lightbox="renos"><img src="images/renovations-1.png" alt=""></a>
-        <a href="images/renovations-2.png" data-lightbox="renos"><img src="images/renovations-2.png" alt=""></a>
-        <a href="images/renovations-3.png" data-lightbox="renos"><img src="images/renovations-3.png" alt=""></a>
+  <main>
+    <section class="hero section-full">
+      <div class="hero-bg"></div>
+      <div class="wrap">
+        <h1>Renovations & Basement Development</h1>
+        <p class="lead">From bathrooms and kitchens to legal basement suites, we deliver functional layouts and durable finishes.</p>
+        <p class="cta">
+          <a class="btn primary" href="#contact">Get a quote</a>
+          <a class="btn" href="gallery.html">View gallery</a>
+        </p>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Get a free estimate. We’ll reply within one business day.</p>
-      <form onsubmit="return sendMessage(event)">
-        <label>Name<input required name="name" /></label>
-        <label>Email<input required type="email" name="email" /></label>
-        <label>Phone<input name="phone" /></label>
-        <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
-        <button class="btn primary" type="submit">Send</button>
-        <small id="status"></small>
-      </form>
+    <section class="section-alt">
+      <div class="wrap">
+        <h2>Renovations</h2>
+        <p>We handle kitchens, bathrooms, basements, and full‑home refreshes with clean finishes and clear timelines.</p>
+        <div class="grid" style="margin-top:16px">
+          <div class="card"><h3>Basements</h3><ul class="check">
+            <li>Legal/secondary suites</li><li>Framing, drywall, paint</li><li>Flooring & trims</li></ul></div>
+          <div class="card"><h3>Bathrooms</h3><ul class="check">
+            <li>Tile & waterproofing</li><li>Vanities & fixtures</li><li>Ventilation & lighting</li></ul></div>
+          <div class="card"><h3>Kitchens</h3><ul class="check">
+            <li>Cabinets & countertops</li><li>Backsplash & flooring</li><li>Appliance coordination</li></ul></div>
+        </div>
+        <h2 style="margin-top:28px">Renovation Gallery</h2>
+        <div class="gallery" style="margin-top:16px">
+          <a href="images/renovations-1.png" data-lightbox="renos"><img src="images/renovations-1.png" alt=""></a>
+          <a href="images/renovations-2.png" data-lightbox="renos"><img src="images/renovations-2.png" alt=""></a>
+          <a href="images/renovations-3.png" data-lightbox="renos"><img src="images/renovations-3.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-band">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Get a free estimate. We’ll reply within one business day.</p>
+        <form onsubmit="return sendMessage(event)">
+          <label>Name<input required name="name" /></label>
+          <label>Email<input required type="email" name="email" /></label>
+          <label>Phone<input name="phone" /></label>
+          <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
+          <button class="btn primary" type="submit">Send</button>
+          <small id="status"></small>
+        </form>
+      </div>
     </section>
   </main>
 

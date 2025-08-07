@@ -6,25 +6,28 @@
   <title>Landscaping – Noor Projects Inc.</title>
   <meta name="description" content="Sod and rock installs, mulch, edging, and paver patios — clean lines, proper prep, and tidy finish." />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Page-specific accent override to GREEN for landscaping -->
+  <style>
+    :root{ --acc:#245c46; }
+  </style>
 </head>
 <body>
-
   <header>
-  <div class="wrap nav">
-    <a href="index.html" class="logo">
-      <img src="images/logo-green.png" alt="Noor Projects Inc. logo - Green" />
-    </a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="renovations.html">Renovations</a>
-      <a href="landscaping.html">Landscaping</a>
-      <a href="exteriors.html">Exteriors</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="blog.html">Blog</a>
-      <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
-    </nav>
-  </div>
-</header>
+    <div class="wrap nav">
+      <a href="index.html" class="logo">
+        <img src="images/logo-green.png" alt="Noor Projects Inc. logo - Green" />
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="renovations.html">Renovations</a>
+        <a href="landscaping.html">Landscaping</a>
+        <a href="exteriors.html">Exteriors</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <section class="hero section-full">
@@ -82,6 +85,5 @@
     </div>
   </footer>
   <script src="script.js"></script>
-
 </body>
 </html>
