@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Landscaping – Noor Projects Inc.</title>
   <meta name="description" content="Sod and rock installs, mulch, edging, and paver patios — clean lines, proper prep, and tidy finish." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <!-- Page-specific accent override to GREEN for landscaping -->
   <style>
@@ -36,7 +37,7 @@
         <h1>Landscaping: Sod, Rock, Mulch, Pavers</h1>
         <p class="lead">Sod and rock installs, mulch, edging, and paver patios — clean lines, proper prep, and tidy finish.</p>
         <p class="cta">
-          <a class="btn primary" href="#contact">Get a quote</a>
+          <a class="btn primary" href="#contact">Quick Free Quote</a>
           <a class="btn" href="gallery.html">View gallery</a>
         </p>
       </div>
@@ -63,21 +64,42 @@
       </div>
     </section>
 
-    <section id="contact" class="section-band">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <p>Get a free estimate. We’ll reply within one business day.</p>
-        <form onsubmit="return sendMessage(event)">
-          <label>Name<input required name="name" /></label>
-          <label>Email<input required type="email" name="email" /></label>
-          <label>Phone<input name="phone" /></label>
-          <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
-          <button class="btn primary" type="submit">Send</button>
-          <small id="status"></small>
-        </form>
-      </div>
-    </section>
-  </main>
+    <section id="contact" class="section-band contact-modern">
+  <div class="wrap contact-wrap">
+    <div class="contact-content">
+      <h2 class="contact-title">
+        Start Your <span class="emph">Project</span><br/>Estimate
+      </h2>
+
+      <form onsubmit="return sendMessage(event)">
+        <div class="input-shell">
+          <input name="name" placeholder="Your Name" required />
+        </div>
+
+        <div class="form-grid two">
+          <div class="input-shell">
+            <input name="phone" placeholder="Phone" />
+          </div>
+          <div class="input-shell">
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+        </div>
+
+        <div class="input-shell">
+          <input name="address" placeholder="Your Address" />
+        </div>
+
+        <div class="input-shell">
+          <textarea name="message" placeholder="Your Inquiry" oninput="countChars(this)"></textarea>
+        </div>
+
+        
+
+        <button class="btn accent" type="submit">Quick Free Quote</button>
+      </form>
+    </div>
+  </div>
+</section>
 
   <footer>
     <div class="wrap">
