@@ -330,3 +330,250 @@ ul.check li::before{content: "\2713";position:absolute;left:0;color:var(--acc)}
   box-shadow: 0 10px 28px rgba(0,0,0,.22);
 }
 .qsubmit:hover{ filter: brightness(.96); cursor: pointer; }
+
+/* ====== HEADER V2 (large logo + centered nav + right CTAs) ====== */
+:root{
+  --header-height: 84px;         /* tall header like reference */
+  --nav-gap: 28px;
+  --nav-max: 1200px;             /* widen if needed (1320/1440) */
+}
+
+/* Container header class used by new markup */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;              /* keep header crisp over hero */
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+}
+
+/* 3‑column layout: brand | nav | CTAs */
+.site-header .nav-wrap{
+  height: var(--header-height);
+  max-width: var(--nav-max);
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--nav-gap);
+}
+
+/* Big, crisp logo */
+.site-header .brand img{
+  display: block;
+  height: 56px;                  /* adjust to 64/72 if you want it bigger */
+  width: auto;
+}
+
+/* Centered nav links */
+.primary-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.primary-nav a,
+.primary-nav .nav-parent{
+  font: 500 16px/1.2 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--fg);
+  text-decoration: none;
+}
+.primary-nav a:hover,
+.primary-nav .nav-parent:hover{ opacity: .75; }
+
+/* Right-side call-to-actions */
+.cta-wrap{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Pill buttons tuned for header (reuse existing .btn base safely) */
+.btn.header-pill{
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font: 700 14px/1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  letter-spacing: .3px;
+  white-space: nowrap;
+}
+
+.btn-outline{
+  border: 2px solid var(--acc);
+  color: var(--acc);
+  background: transparent;
+}
+
+.btn-gradient{
+  background: linear-gradient(90deg, color-mix(in srgb, var(--acc) 85%, #fff 15%), var(--acc));
+  color: #fff;
+  border: none;
+}
+
+/* Hamburger for mobile (hidden on desktop) */
+.hamburger{
+  display: none;
+  width: 44px; height: 44px;
+  border: 0; background: transparent; padding: 8px; border-radius: 10px;
+}
+.hamburger span{
+  display: block;
+  height: 2px; margin: 6px 0; background: #0f0f0f; border-radius: 1px;
+}
+
+/* Mobile slide-down panel */
+.mobile-panel{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 20px 18px;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+.mobile-panel a,
+.mobile-panel button{
+  text-align: left;
+  font: 500 16px system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: none; border: 0; padding: 10px 0; color: var(--fg); text-decoration: none;
+}
+.mobile-panel .btn{ width: 100%; justify-content: center; margin-top: 6px; }
+
+/* Responsive behavior */
+@media (max-width: 1024px){
+  .primary-nav{ display: none; }
+  .cta-wrap .btn{ display: none; }     /* hide pill buttons on small screens */
+  .hamburger{ display: inline-block; }
+  .site-header .brand img{ height: 52px; }
+  .site-header .nav-wrap{ gap: 16px; }
+}
+
+/* Optional: make generic &lt;header&gt; background neutral so old pages stay fine */
+header.site-header{ background: #fff; }
+
+
+/* ===== Header V2 Fixes (visual clean‑up) ===== */
+
+/* 1) Remove global image border/radius on the logo */
+.site-header .brand img{
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* 2) Reset nav-parent buttons so they look like links, not gray buttons */
+.primary-nav .nav-parent{
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* 3) Hide the mobile panel by default; only show when toggled */
+.mobile-panel{ display: none; }
+.mobile-panel.open,
+.mobile-panel[data-open="true"],
+.mobile-panel[aria-hidden="false"]{ display: flex; }
+.mobile-panel[hidden]{ display: none !important; }
+
+/* 4) Ensure the sticky header uses white background, not the page beige */
+header.site-header{
+  background: #fff !important;
+  border-bottom: 1px solid var(--border);
+}
+
+/* 5) Nav link spacing + alignment tweaks */
+.primary-nav{ gap: 22px; }
+.site-header .nav-wrap{ padding-left: 28px; padding-right: 28px; }
+
+/* 6) Make the pill buttons use the new header style, not default .btn border */
+.cta-wrap .btn{ border: 0; }
+.cta-wrap .btn.btn-outline{
+  border: 2px solid var(--acc);
+  background: transparent;
+  color: var(--acc);
+}
+.cta-wrap .btn.btn-gradient{
+  background: linear-gradient(90deg, color-mix(in srgb, var(--acc) 85%, #fff 15%), var(--acc));
+  color: #fff;
+}
+
+/* 7) Slightly increase logo size on desktop */
+@media (min-width: 1025px){
+  .site-header .brand img{ height: 68px; }
+}
+
+/* 8) Keep the old .nav (legacy) styles from affecting new header bar */
+.site-header .nav{ all: unset; } /* neutralize legacy .nav if present inside .site-header */
+/* --- Primary nav: plain links except Gallery --- */
+.primary-nav a:not(.btn){
+  padding: 8px 6px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--fg);
+  font-weight: 600;
+}
+.primary-nav a:not(.btn):hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Ensure only links with .btn get pill styles */
+.primary-nav a.btn.header-pill{ display:inline-flex; align-items:center; }
+
+/* Guard against global .btn styles making all nav links look like buttons */
+.primary-nav a:not(.btn){ box-shadow:none !important; }
+
+/* Tighter header on small screens and keep logo readable */
+@media (max-width: 1024px){
+  :root{ --header-height: 76px; }
+  .site-header .brand img{ height: 48px; }
+}
+/* Fix phone + consultation buttons in header */
+.cta-wrap {
+  gap: 10px; /* reduce spacing between phone & consultation */
+}
+
+.cta-wrap .btn.header-pill {
+  font-size: 14px;
+  padding: 10px 16px; /* smaller pill height */
+}
+
+.cta-wrap .btn-outline {
+  border: 2px solid var(--acc);
+  color: var(--acc);
+  background: transparent;
+}
+
+.cta-wrap .btn-gradient {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--acc) 85%, #fff 15%), var(--acc));
+  color: #fff;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  .cta-wrap .btn { display: none; } /* hide both on smaller screens */
+}
+/* --- Pill centering fix (applies to Gallery + header CTAs) --- */
+.btn.header-pill{
+  display: inline-flex;            /* switch from inline-block to flex */
+  align-items: center;             /* vertical centering */
+  justify-content: center;         /* horizontal centering */
+  line-height: 1;                  /* kill tall inherited line-height */
+  height: auto;                    /* avoid fighting padding with fixed height */
+  min-height: 40px;                /* keeps it button-like */
+  padding: 10px 16px;              /* your current compact padding */
+}
+
+/* keep primary-nav Gallery pill consistent too */
+.primary-nav a.btn.header-pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
