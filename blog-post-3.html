@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exterior Paint: Prep That Actually Lasts – Noor Projects Blog</title>
+  <meta name="description" content="Prep is 80% of a great exterior finish. Here’s the checklist." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <strong>Noor Projects Inc.</strong>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="renovations.html">Renovations</a>
+        <a href="landscaping.html">Landscaping</a>
+        <a href="exteriors.html">Exteriors</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Exterior Paint: Prep That Actually Lasts</h1>
+      <p class="lead">Prep is 80% of a great exterior finish. Here’s the checklist.</p>
+      <p style="margin-top:18px">
+        <a class="btn primary" href="#contact">Get a quote</a>
+        <a class="btn" href="gallery.html" style="margin-left:10px">View gallery</a>
+      </p>
+    </section>
+
+    <section>
+      <div class="breadcrumbs"><a href="blog.html">← Back to Blog</a></div>
+      <h2>Exterior Paint: Prep That Actually Lasts</h2>
+      <p class="lead">Prep is 80% of a great exterior finish. Here’s the checklist.</p>
+      <p><img src="images/exteriors-2.png" alt=""></p>
+      
+    <h3>Wash & Scrape</h3>
+    <p>Remove debris, mildew, and failing paint to bare, sound substrate.</p>
+    <h3>Prime Smart</h3>
+    <p>Spot prime exposed areas and use the right primer for the surface.</p>
+    <h3>Seal & Caulk</h3>
+    <p>Seal gaps and joints before finish coats for weather resistance.</p>
+    
+    </section>
+    
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Get a free estimate. We’ll reply within one business day.</p>
+      <form onsubmit="return sendMessage(event)">
+        <label>Name<input required name="name" /></label>
+        <label>Email<input required type="email" name="email" /></label>
+        <label>Phone<input name="phone" /></label>
+        <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
+        <button class="btn primary" type="submit">Send</button>
+        <small id="status"></small>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© Noor Projects Inc. • Calgary, AB</small>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>

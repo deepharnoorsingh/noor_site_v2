@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog – Noor Projects Inc.</title>
+  <meta name="description" content="Renovation, landscaping, and exterior tips from the field." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <strong>Noor Projects Inc.</strong>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="renovations.html">Renovations</a>
+        <a href="landscaping.html">Landscaping</a>
+        <a href="exteriors.html">Exteriors</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Noor Projects Blog</h1>
+      <p class="lead">Renovation, landscaping, and exterior tips from the field.</p>
+      <p style="margin-top:18px">
+        <a class="btn primary" href="#contact">Get a quote</a>
+        <a class="btn" href="gallery.html" style="margin-left:10px">View gallery</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Blog</h2>
+      <p>Practical renovation, landscaping, and exterior maintenance tips for Calgary homeowners.</p>
+      <div class="post-list" style="margin-top:16px">
+        <article class="post-card">
+          <a class="thumb" href="blog-post-1.html"><img src="images/landscaping-2.png" alt=""></a>
+          <div class="content">
+            <h3><a href="blog-post-1.html">Sod Aftercare: 7-Day Success Checklist</a></h3>
+            <p class="lead">Watering, first mow, and soil tips to lock in that new‑lawn look.</p>
+            <a href="blog-post-1.html">Read more →</a>
+          </div>
+        </article>
+        <article class="post-card">
+          <a class="thumb" href="blog-post-2.html"><img src="images/renovations-2.png" alt=""></a>
+          <div class="content">
+            <h3><a href="blog-post-2.html">Bathroom Reno Timeline: What to Expect</a></h3>
+            <p class="lead">A step‑by‑step guide from demo to final caulk line.</p>
+            <a href="blog-post-2.html">Read more →</a>
+          </div>
+        </article>
+        <article class="post-card">
+          <a class="thumb" href="blog-post-3.html"><img src="images/exteriors-2.png" alt=""></a>
+          <div class="content">
+            <h3><a href="blog-post-3.html">Exterior Paint: Prep That Actually Lasts</a></h3>
+            <p class="lead">Prep is 80% of a great exterior finish. Here’s the checklist.</p>
+            <a href="blog-post-3.html">Read more →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Get a free estimate. We’ll reply within one business day.</p>
+      <form onsubmit="return sendMessage(event)">
+        <label>Name<input required name="name" /></label>
+        <label>Email<input required type="email" name="email" /></label>
+        <label>Phone<input name="phone" /></label>
+        <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
+        <button class="btn primary" type="submit">Send</button>
+        <small id="status"></small>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© Noor Projects Inc. • Calgary, AB</small>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>

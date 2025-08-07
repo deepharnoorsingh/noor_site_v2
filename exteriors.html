@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exteriors – Noor Projects Inc.</title>
+  <meta name="description" content="Siding and exterior upgrades done to standard, with careful prep and tidy finishes." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <strong>Noor Projects Inc.</strong>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="renovations.html">Renovations</a>
+        <a href="landscaping.html">Landscaping</a>
+        <a href="exteriors.html">Exteriors</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Exteriors: Siding, Paint, Gutters</h1>
+      <p class="lead">Siding and exterior upgrades done to standard, with careful prep and tidy finishes.</p>
+      <p style="margin-top:18px">
+        <a class="btn primary" href="#contact">Get a quote</a>
+        <a class="btn" href="gallery.html" style="margin-left:10px">View gallery</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Exteriors</h2>
+      <p>Siding, soffit, fascia, gutters, exterior paint, and small repairs with tidy cleanup and durable results.</p>
+      <div class="grid" style="margin-top:16px">
+        <div class="card"><h3>Siding</h3><ul class="check">
+          <li>Vinyl & fiber cement</li><li>Repairs & replacements</li><li>Flashing & trims</li></ul></div>
+        <div class="card"><h3>Gutters & Eaves</h3><ul class="check">
+          <li>Install & repairs</li><li>Downspouts & guards</li><li>Sealing & caulking</li></ul></div>
+        <div class="card"><h3>Exterior Paint</h3><ul class="check">
+          <li>Prep, prime, coat</li><li>Weather‑resistant finishes</li><li>Clean lines & protection</li></ul></div>
+      </div>
+      <h2 style="margin-top:28px">Exteriors Gallery</h2>
+      <div class="gallery" style="margin-top:16px">
+        <a href="images/exteriors-1.png" data-lightbox="ext"><img src="images/exteriors-1.png" alt=""></a>
+        <a href="images/exteriors-2.png" data-lightbox="ext"><img src="images/exteriors-2.png" alt=""></a>
+        <a href="images/exteriors-3.png" data-lightbox="ext"><img src="images/exteriors-3.png" alt=""></a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Get a free estimate. We’ll reply within one business day.</p>
+      <form onsubmit="return sendMessage(event)">
+        <label>Name<input required name="name" /></label>
+        <label>Email<input required type="email" name="email" /></label>
+        <label>Phone<input name="phone" /></label>
+        <label>Project details<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea></label>
+        <button class="btn primary" type="submit">Send</button>
+        <small id="status"></small>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© Noor Projects Inc. • Calgary, AB</small>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
