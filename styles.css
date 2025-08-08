@@ -49,11 +49,20 @@ header{
   padding: 120px 0 80px; /* taller hero */
   border-bottom: none;
 }
-.hero-bg{
-  position: absolute; inset: 0;
-  background: linear-gradient(0deg, rgba(247,243,236,.94), rgba(247,243,236,.94)),
-              url('images/hero.jpg') center/cover no-repeat; /* replace image as needed */
-  z-index: 0;
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.4), /* dark overlay */
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('images/hero-bg.jpg') center/cover no-repeat;
+  z-index: -1;
 }
 .hero .wrap{ position: relative; z-index: 1; }
 .hero h1{ font-size: clamp(36px, 6vw, 60px); color: var(--fg); margin: 0 0 14px; }
@@ -586,4 +595,164 @@ header.site-header{
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+/* ===== About section (two-column + proof card) ===== */
+#about.section-band {
+  padding: 72px 0;
+  background: var(--bg); /* blends with your theme */
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* ~60/40 */
+  gap: 36px;
+  align-items: start;
+}
+
+.about-copy .overline,
+.about-card .overline{
+  font: 700 12px/1.2 'Montserrat', sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.about-copy h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.06;
+  color: var(--fg);
+  margin: 0 0 8px;
+}
+
+.about-copy .lead{
+  color: var(--acc);
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.about-copy p{
+  margin: 0 0 12px;
+  color: var(--fg);
+}
+
+.about-ctas .btn{
+  border-radius: 28px;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+.about-ctas .btn + .btn{ margin-left: 10px; }
+
+.about-card{
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  background: rgba(255,255,255,.10);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 14px 36px rgba(0,0,0,.12);
+  padding: 18px 18px 16px;
+}
+
+.about-card h3{
+  margin: 6px 0 10px;
+  font: 700 22px/1.2 'Montserrat', sans-serif;
+  color: var(--fg);
+}
+
+.about-card ul.check{
+  margin-top: 6px;
+}
+.about-card ul.check li{
+  margin: 8px 0;
+}
+
+.about-card small{
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .about-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about-card{
+    order: 2;
+  }
+}
+/* --- About: keep it clean, top-aligned, sane width --- */
+#about.section-band { padding: 64px 0; }
+
+/* constrain just this section so it doesn't stretch awkwardly */
+#about .wrap {
+  max-width: 1200px;   /* adjust if you want wider/narrower */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* two columns, top-aligned, normal gaps */
+#about .about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;  /* ~60/40 */
+  gap: 32px;
+  align-items: start;                   /* TOP align both sides */
+}
+
+/* left text block: normal flow */
+#about .about-copy { max-width: 58ch; }
+
+/* right card: auto height, no forced centering */
+#about .about-card {
+  display: block;
+  height: auto;
+  padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+}
+
+/* tidy type spacing so baselines feel aligned */
+#about .about-copy .overline { margin: 0 0 10px; }
+#about .about-copy h2        { margin: 0 0 8px; }
+#about .about-copy .lead     { margin: 0 0 14px; }
+#about .about-copy p         { margin: 0 0 14px; }
+
+#about .about-card .overline { margin: 0 0 8px; }
+#about .about-card h3        { margin: 0 0 10px; }
+#about .about-card ul        { margin: 8px 0 0; }
+#about .about-card li        { margin: 8px 0; }
+
+/* mobile: stack cleanly */
+@media (max-width: 980px){
+  #about .about-grid { grid-template-columns: 1fr; gap: 20px; }
+  #about .about-copy { max-width: none; }
+}
+#about .about-copy {
+  text-align: left;
+}
+
+#about .about-copy > * {
+  margin-left: 0 !important;  /* Remove any side offset */
+  padding-left: 0 !important; /* Remove any side padding */
+}
+
+#about .about-copy h2 {
+  white-space: nowrap; /* Keep main heading on one line */
+}
+
+#about .about-copy .lead {
+  display: block;
+}
+#about .about-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns everything, including the button, to the left */
 }
