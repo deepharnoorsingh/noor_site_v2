@@ -333,7 +333,7 @@ ul.check li::before{content: "\2713";position:absolute;left:0;color:var(--acc)}
 
 /* ====== HEADER V2 (large logo + centered nav + right CTAs) ====== */
 :root{
-  --header-height: 84px;         /* tall header like reference */
+  --header-height: 110px;         /* tall header like reference */
   --nav-gap: 28px;
   --nav-max: 1200px;             /* widen if needed (1320/1440) */
 }
@@ -351,20 +351,30 @@ ul.check li::before{content: "\2713";position:absolute;left:0;color:var(--acc)}
 /* 3‑column layout: brand | nav | CTAs */
 .site-header .nav-wrap{
   height: var(--header-height);
-  max-width: var(--nav-max);
-  margin: 0 auto;
-  padding: 0 16px;
+  /* max-width: var(--nav-max); */ /* removed for full-bleed */
+  /* margin: 0 auto; */           /* removed for full-bleed */
+  padding: 0 15px;                /* add horizontal padding */
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: var(--nav-gap);
 }
 
+
 /* Big, crisp logo */
+
+.site-header .brand {
+  position: relative;
+  transform: translateX(-10px); /* adjust as needed to move slightly inward/outward */
+}
 .site-header .brand img{
   display: block;
-  height: 56px;                  /* adjust to 64/72 if you want it bigger */
+  height: 180px;                  /* reasonably large logo */
+  max-height: none;
+  flex-shrink: 0;
   width: auto;
+  margin-left: 0;
+  object-fit: contain;
 }
 
 /* Centered nav links */
@@ -489,7 +499,7 @@ header.site-header{
 
 /* 5) Nav link spacing + alignment tweaks */
 .primary-nav{ gap: 22px; }
-.site-header .nav-wrap{ padding-left: 28px; padding-right: 28px; }
+/* .site-header .nav-wrap{ padding-left: 28px; padding-right: 28px; } */ /* removed for flush edge */
 
 /* 6) Make the pill buttons use the new header style, not default .btn border */
 .cta-wrap .btn{ border: 0; }
@@ -504,8 +514,8 @@ header.site-header{
 }
 
 /* 7) Slightly increase logo size on desktop */
-@media (min-width: 1025px){
-  .site-header .brand img{ height: 68px; }
+@media (min-width: 1280px){
+  .site-header .brand img{ height: 110px; }
 }
 
 /* 8) Keep the old .nav (legacy) styles from affecting new header bar */
