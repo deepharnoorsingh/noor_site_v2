@@ -833,3 +833,96 @@ header.site-header{
   #services-mosaic .mosaic-grid{ grid-template-columns:1fr; grid-auto-rows:auto; gap:14px; }
   .svc-landscaping, .svc-basement{ min-height:320px; }
 }
+/* ===== HEADER ===== */
+header {
+  /* existing header CSS */
+}
+
+/* ===== HERO: Projects Done Right ===== */
+.hero-intro {
+  --deep:#091335;      /* navy */
+  --mid:#0f2f79;       /* indigo */
+  --roy:#1a45cd;       /* royal */
+  --max: 1000px;       /* width of centered block */
+  --padX: 22px;        /* side padding */
+  --offset-left: 65px; /* right shift (set 0 for exact center) */
+
+  padding: 90px 0 76px;
+  background:
+    radial-gradient(1100px 520px at 85% -10%, rgba(255,255,255,.12), transparent 60%),
+    radial-gradient(900px 520px at 10% 110%, rgba(255,255,255,.08), transparent 60%),
+    linear-gradient(180deg, var(--deep) 0%, var(--mid) 55%, var(--roy) 100%);
+  color:#fff;
+  border-bottom: 1px solid rgba(0,0,0,.18);
+}
+
+.hero-intro__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--padX);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transform: translateX(var(--offset-left));
+}
+
+.hero-intro h1 {
+  margin: 0 0 16px;
+  font-family:'Montserrat',sans-serif;
+  font-weight: 800;
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.06;
+  letter-spacing: .2px;
+  text-shadow: 0 2px 18px rgba(0,0,0,.22);
+}
+
+.pill-note {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background:#fff;
+  color:#153a9e;
+  font: 800 clamp(14px, 2vw, 20px)/1.15 'Montserrat',sans-serif;
+  text-decoration:none;
+  box-shadow: 0 12px 28px rgba(0,0,0,.22);
+}
+
+.hero-intro__body {
+  margin: 0;
+  max-width: 900px;
+  color:#e9efff;
+  font-family:'Roboto',sans-serif;
+  font-weight: 500;
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.58;
+}
+
+@media (max-width: 640px) {
+  .hero-intro {
+    padding: 72px 0 62px;
+  }
+  .hero-intro__inner {
+    transform: none;
+  }
+  .pill-note {
+    margin-bottom: 14px;
+  }
+}/* hero body text = pure white */
+.hero-intro .hero-intro__body { 
+  color: #ffffff !important;
+}
+/* Center the hero block (remove manual right shift) */
+.hero-intro {
+  --offset-left: 0px; /* was 75px */
+}
+.hero-intro__inner {
+  transform: none; /* remove translateX(var(--offset-left)) */
+}
+
+/* Make ALL hero paragraphs white, regardless of class */
+.hero-intro p,
+.hero-intro .hero-intro__body {
+  color: #ffffff !important;
+}
