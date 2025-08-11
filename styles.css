@@ -1659,3 +1659,21 @@ header.site-header{
     max-width: none;
   }
 }
+
+/* --- Landscaping page theme overrides (scoped & valid) --- */
+body.landscaping{
+  /* primary accents for this page */
+  --acc: #245c46;           /* deep green */
+  --blue-mid: #2e7d5b;      /* used by gradients */
+  --blue-lite: #3ba776;     /* used by gradients */
+}
+
+/* turn the little underline accents green on this page */
+body.landscaping #contact .contact-text h2::after,
+body.landscaping #about.section-band .about-copy h2::after{
+  background: linear-gradient(90deg, var(--blue-mid), var(--blue-lite));
+}
+
+/* (optional) keep link hover in the green family */
+body.landscaping a:hover{ color:#1c4637; }
+
