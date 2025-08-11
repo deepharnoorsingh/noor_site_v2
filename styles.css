@@ -1,14 +1,12 @@
-/* Default text (body, paragraphs, form inputs, nav links, etc.) */
 body, p, a, li, label, input, textarea, button, small {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #333;
 }
-
-/* Headings (H1–H6) */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;}
+  font-weight: 700;
+}
   :root{
   --max:1280px; /* was 1100px */
   --bg:#f7f3ec;       /* warm beige background */
@@ -26,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  font-family:'Roboto', sans-serif;
   color:var(--fg);
   background:var(--bg);
   line-height:1.6;
@@ -748,7 +746,7 @@ header.site-header{
 }
 
 #about .about-copy h2 {
-  white-space: nowrap; /* Keep main heading on one line */
+  white-space: normal; /* allow wrapping so the headline doesn't get clipped */
 }
 
 #about .about-copy .lead {
@@ -760,64 +758,114 @@ header.site-header{
   align-items: flex-start; /* Aligns everything, including the button, to the left */
 }
 /* ===== Service Mosaic (clean, aligned) ===== */
-#services-mosaic.section-full{
-  padding:64px 0;
+#services-mosaic.section-full {
+  padding: 64px 0;
+  margin-bottom: 80px;
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(255,255,255,.6), transparent 60%),
     radial-gradient(1200px 600px at 80% 110%, rgba(0,0,0,.05), transparent 60%),
     var(--bg);
-  border-top:1px solid var(--border);
-  
+  border-top: 1px solid var(--border);
 }
-#services-mosaic.section-full{
-  padding:64px 0;
-  margin-bottom: 22px;  /* <— add this */
-  /* …rest stays the same… */
+#services-mosaic .mosaic-head {
+  text-align: center;
+  margin: 0 0 22px;
 }
-#services-mosaic .mosaic-head{ text-align:center; margin:0 0 22px; }
-#services-mosaic .mosaic-head .overline{ font:700 12px/1.2 'Montserrat',sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 8px; }
-#services-mosaic .mosaic-head h2{ font-family:'Montserrat',sans-serif; font-weight:700; font-size:clamp(26px,4.2vw,40px); line-height:1.06; color:var(--fg); margin:0 0 6px; }
-#services-mosaic .mosaic-head .sublead{ color:var(--muted); margin:0 0 4px; }
-
-/* GRID: 12 columns, fixed row tracks for perfect alignment */
-#services-mosaic .mosaic-grid{
-  display:grid;
-  grid-template-columns:repeat(12,minmax(0,1fr));
-  grid-auto-rows:200px;   /* track height for small tiles */
-  gap:18px;
+#services-mosaic .mosaic-head .overline {
+  font: 700 12px/1.2 'Montserrat',sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 8px;
 }
-
-/* Card base: keep your bubble look */
-#services-mosaic .mosaic-card{
-  position:relative;
-  display:block;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--border);
-  background:#ddd; /* fallback */
-  box-shadow:0 8px 22px rgba(0,0,0,.08);
-  isolation:isolate;
-  min-height:0;           /* let grid control height */
+#services-mosaic .mosaic-head h2 {
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px,4.2vw,40px);
+  line-height: 1.06;
+  color: var(--fg);
+  margin: 0 0 6px;
 }
-#services-mosaic .mosaic-card > img{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .35s ease;
+#services-mosaic .mosaic-head .sublead {
+  color: var(--muted);
+  margin: 0 0 4px;
 }
-#services-mosaic .mosaic-card::after{
-  content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45)); z-index:1; transition:opacity .35s ease;
+#services-mosaic .mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(12,minmax(0,1fr));
+  grid-auto-rows: 200px;
+  gap: 18px;
 }
-#services-mosaic .mosaic-card .badge{
-  position:absolute; top:14px; left:14px; z-index:2; display:inline-grid; place-items:center; width:34px; height:34px; border-radius:10px; font:700 14px/1 'Montserrat',sans-serif; color:#fff; background:var(--acc); box-shadow:0 6px 14px rgba(0,0,0,.18);
+#services-mosaic .mosaic-card {
+  position: relative;
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #ddd;
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+  isolation: isolate;
+  min-height: 0;
 }
-#services-mosaic .mosaic-card .label{ position:absolute; left:16px; right:16px; bottom:16px; z-index:2; color:#fff; }
-#services-mosaic .mosaic-card .label h3{ margin:0 0 6px; font:700 clamp(16px,2vw,20px)/1.15 'Montserrat',sans-serif; }
-#services-mosaic .mosaic-card .label p{ margin:0; font:500 14px/1.35 'Roboto',sans-serif; opacity:.95; }
-#services-mosaic .mosaic-card:hover > img{ transform:scale(1.04); }
-#services-mosaic .mosaic-card:hover::after{ opacity:.35; }
-#services-mosaic .mosaic-card:hover{ box-shadow:0 14px 36px rgba(0,0,0,.16); }
-
-/* DESKTOP: explicit areas (stable) */
+#services-mosaic .mosaic-card > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+#services-mosaic .mosaic-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45));
+  z-index: 1;
+  transition: opacity .35s ease;
+}
+#services-mosaic .mosaic-card .badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  font: 700 14px/1 'Montserrat',sans-serif;
+  color: #fff;
+  background: var(--acc);
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+}
+#services-mosaic .mosaic-card .label {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+  color: #fff;
+}
+#services-mosaic .mosaic-card .label h3 {
+  margin: 0 0 6px;
+  font: 700 clamp(16px,2vw,20px)/1.15 'Montserrat',sans-serif;
+}
+#services-mosaic .mosaic-card .label p {
+  margin: 0;
+  font: 500 14px/1.35 'Roboto',sans-serif;
+  opacity: .95;
+}
+#services-mosaic .mosaic-card:hover > img {
+  transform: scale(1.04);
+}
+#services-mosaic .mosaic-card:hover::after {
+  opacity: .35;
+}
+#services-mosaic .mosaic-card:hover {
+  box-shadow: 0 14px 36px rgba(0,0,0,.16);
+}
 @media (min-width:1024px){
-  #services-mosaic .mosaic-grid{
+  #services-mosaic .mosaic-grid {
     grid-template-areas:
       "land land land land land land base base base base base base"
       "land land land land land land base base base base base base"
@@ -830,21 +878,27 @@ header.site-header{
   .svc-bathroom   { grid-area:bath; }
   .svc-exteriors  { grid-area:exte; }
 }
-
-/* TABLET: 2-col, tall features on their own rows */
 @media (max-width:1023px) and (min-width:641px){
-  #services-mosaic .mosaic-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:220px; gap:16px; }
-  .svc-landscaping, .svc-basement{ grid-column:1 / -1; grid-row:auto; min-height:440px; }
+  #services-mosaic .mosaic-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-auto-rows: 220px;
+    gap: 16px;
+  }
+  .svc-landscaping, .svc-basement {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 440px;
+  }
 }
-
-/* MOBILE: single column stack */
 @media (max-width:640px){
-  #services-mosaic .mosaic-grid{ grid-template-columns:1fr; grid-auto-rows:auto; gap:14px; }
-  .svc-landscaping, .svc-basement{ min-height:320px; }
-}
-/* ===== HEADER ===== */
-header {
-  /* existing header CSS */
+  #services-mosaic .mosaic-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 14px;
+  }
+  .svc-landscaping, .svc-basement {
+    min-height: 320px;
+  }
 }
 
 /* ===== HERO: Projects Done Right ===== */
@@ -1161,8 +1215,8 @@ header {
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;  /* left text / right form */
-  gap: 36px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: start;
 }
 
@@ -1209,8 +1263,8 @@ header {
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 36px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: start;
 }
 
@@ -1301,4 +1355,307 @@ header {
   #contact .contact-grid{ gap: 24px; }
   #contact .contact-text{ max-width: none; }
   #contact .contact-text h2::after{ bottom: -8px; }
+}
+/* Work Preview Section */
+#work-preview {
+  padding: 4rem 0;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.work-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.work-tiles .tile {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-tiles .tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.work-tiles .tile:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.work-copy h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.work-copy p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.work-copy .btn.primary {
+  background: #0a3d62;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.work-copy .btn.primary:hover {
+  background: #074168;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-tiles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* ===== About section — POP refresh & aligned scale (overrides) ===== */
+#about.section-band{
+  /* subtle depth to make the band pop without clashing */
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(0,0,0,.04), transparent 55%),
+    radial-gradient(1200px 600px at 90% 110%, rgba(0,0,0,.03), transparent 55%),
+    var(--bg);
+  padding: 72px 0; /* consistent with site rhythm */
+}
+
+/* unified container width */
+#about.section-band .wrap{ max-width: 1180px; }
+
+/* clean 60/40 split and strong top alignment */
+#about.section-band .about-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr; /* ~58/42 */
+  gap: 40px;
+  align-items: start;
+}
+
+/* === About layout tweak: make the right proof card larger and full-height === */
+#about.section-band .about-grid{
+  grid-template-columns: 0.85fr 1.15fr; /* give the proof card more width */
+  align-items: stretch;                 /* stretch rows to tallest child */
+}
+
+#about.section-band .about-card{
+  align-self: stretch;          /* fill the grid row height */
+  min-height: 100%;             /* allow stretching to the tallest column */
+  display: flex;                /* keep internal spacing control */
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 28px;         /* a touch more depth so it reaches lower */
+  margin-top: 6px; /* nudge down so its bottom aligns with the left column CTA */
+}
+
+/* TYPE SCALE — one place to control sizes */
+#about.section-band .about-copy h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(34px, 4.6vw, 48px);
+  line-height: 1.06;
+  letter-spacing: .2px;
+  margin: 0 0 12px;
+  color: var(--fg);
+}
+#about.section-band .about-copy .overline{
+  font: 700 12px/1.2 'Montserrat', sans-serif;
+  text-transform: uppercase; letter-spacing:.14em;
+  color: var(--muted); margin: 0 0 12px;
+}
+#about.section-band .about-copy .lead{
+  color: var(--acc);
+  font: 700 18px/1.4 'Montserrat', sans-serif;
+  margin: 0 0 14px;
+}
+#about.section-band .about-copy p{
+  max-width: 62ch;               /* consistent measure */
+  margin: 0 0 14px;
+  font: 500 17px/1.7 'Roboto', sans-serif; 
+  color: #1f2633;                /* richer contrast */
+}
+#about.section-band .about-ctas .btn{
+  border-radius: 28px; padding: 12px 20px; font-weight: 700;
+}
+
+/* RIGHT CARD — bolder look, aligned scale */
+#about.section-band .about-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 22px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+}
+#about.section-band .about-card .overline{
+  font: 800 11px/1.2 'Montserrat', sans-serif;
+  letter-spacing:.16em; text-transform: uppercase; color: var(--muted);
+  margin: 0 0 8px;
+}
+#about.section-band .about-card h3{
+  margin: 0 0 12px;
+  font: 800 clamp(20px, 3vw, 24px)/1.18 'Montserrat', sans-serif;
+  color: var(--fg);
+}
+#about.section-band .about-card ul.check{ margin-top: 8px; }
+#about.section-band .about-card ul.check li{ margin: 10px 0; padding-left: 22px; }
+#about.section-band .about-card ul.check li::before{ color: var(--acc); font-weight: 900; }
+#about.section-band .about-card small{ display:block; margin-top: 10px; color: var(--muted); }
+
+/* decorative accent under the main heading */
+#about.section-band .about-copy h2::after{
+  content: ""; position: absolute; left: 0; bottom: -10px;
+  width: 80px; height: 4px; border-radius: 4px;
+  background: linear-gradient(90deg, var(--blue-mid), var(--blue-lite));
+}
+#about.section-band .about-copy{ position: relative; }
+
+/* Mobile stacking */
+@media (max-width: 980px){
+  #about.section-band .about-grid{ grid-template-columns: 1fr; gap: 24px; }
+  #about.section-band .about-copy h2{ font-size: clamp(30px, 7vw, 40px); }
+}
+/* Contact grid columns baseline alignment & full-width form */
+#contact .contact-text,
+#contact .contact-content{ display:flex; flex-direction:column; justify-content:flex-start; }
+#contact .contact-content{ padding-top: 4px; }
+#contact .contact-content form{ width:100%; }
+#contact .contact-content .input-shell{ width:100%; }
+# ===== Contact hard overrides (force right column to match left) =====
+# Force grid columns to be equal and align to top
+# Also, ensure right column can grow just as wide as left
+# Remove any global max-width or padding/margin that would restrict form
+# Align headings in both columns to baseline and same size
+# Remove stray spacing above right column
+
+#contact .contact-grid{ grid-template-columns: 1fr 1fr; align-items: start; }
+
+/* Make sure global form max-width isn't clamping the contact form */
+#contact .contact-content form{ max-width: none !important; width: 100% !important; }
+#contact .contact-content .input-shell{ width: 100% !important; }
+
+/* Align both headings in scale and baseline regardless of class names */
+#contact .contact-text h2,
+#contact .contact-content h2{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  font-size: clamp(34px, 4.6vw, 52px);
+  line-height:1.05;
+  margin: 0 0 14px;  /* kill top margins so columns start level */
+}
+
+/* Remove any stray padding/margins that push the right column down */
+#contact .contact-content{ padding-top: 0 !important; margin-top: 0 !important; }
+
+/* ===== Our Approach layout (grid, no overlap) ===== */
+/* ===== Our Approach layout (grid, no overlap) ===== */
+.approach-section{
+  display:grid;
+  grid-template-columns: 1.6fr 0.9fr;  /* give left more width, push card further right */
+  column-gap: 40px;                    /* tighter gap between columns */
+  align-items: start;
+  margin-top: 8px;
+}
+
+.approach-content{
+  align-self: stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  max-width: 78ch;            /* uncrowd: allow wider text column */
+  padding-right: 8px;          /* a touch more breathing room from the card */
+}
+
+.approach-card{
+  align-self: stretch;
+  height: 100%;
+  background: #fff;
+  padding: 18px 20px;          /* tighter internal spacing */
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0,0,0,.10);
+  max-width: 640px;            /* a bit wider card */
+  justify-self: end;           /* move the card further to the right */
+  margin-left: auto;           /* ensure it hugs the right side */
+  transform: translateX(24px); /* nudge it even further right */
+}
+
+/* fine-tune spacing inside the proof card */
+.approach-card h3{ margin: 4px 0 8px; }
+.approach-card p{ margin: 6px 0 8px; }
+.approach-card ul{ margin: 6px 0 0; }
+.approach-card li{ margin: 6px 0; }
+
+/* on very wide screens, nudge the card a bit further right visually */
+@media (min-width: 1280px){
+  .approach-card{ transform: translateX(32px); }
+}
+
+@media (max-width: 980px){
+  .approach-section{ grid-template-columns: 1fr; column-gap: 0; }
+  .approach-card{ height:auto; max-width: none; transform:none; justify-self: stretch; margin-left: 0; }
+}
+
+/* === ABOUT (Our Approach) — push proof card right, uncrowd left, align heights === */
+#about.section-band .wrap{
+  max-width: 1240px;                 /* a bit wider container */
+}
+
+#about.section-band .about-grid{
+  grid-template-columns: 1.6fr 1.05fr;/* wider left, but bigger right than before */
+  gap: 56px;                          /* more breathing room between columns */
+  align-items: stretch;               /* let the card stretch down */
+}
+
+#about.section-band .about-copy{
+  max-width: 68ch;                    /* uncrowd copy; longer line but still readable */
+}
+
+#about.section-band .about-card{
+  max-width: 720px;                   /* larger card */
+  margin-left: auto;                  /* push to the far right */
+  justify-self: end;                  /* hug the right edge of the grid */
+  align-self: stretch;                /* match the left column height */
+  height: 100%;
+  transform: translateX(36px);        /* nudge even more to the right */
+  padding: 24px 26px 32px;            /* a touch more depth */
+  border-radius: 16px;
+  box-shadow: 0 18px 44px rgba(0,0,0,.12);
+}
+
+#about.section-band .about-card h3{
+  font-size: clamp(22px, 3.2vw, 28px);
+  line-height: 1.2;
+}
+
+@media (min-width: 1440px){
+  #about.section-band .about-card{ transform: translateX(54px); } /* push more on very wide screens */
+}
+
+@media (max-width: 1100px){
+  #about.section-band .about-grid{
+    grid-template-columns: 1.2fr 0.8fr;  /* relax on smaller desktops */
+    gap: 32px;
+  }
+  #about.section-band .about-card{
+    transform: none;
+    max-width: none;
+  }
 }
