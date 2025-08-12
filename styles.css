@@ -1684,3 +1684,86 @@ body.landscaping a:hover{ color:#1c4637; }
 .hero .btn { border-color: rgba(255,255,255,.7); }
 .hero .btn:not(.primary) { background: rgba(255,255,255,.12); color: #fff; }
 .hero .btn:not(.primary):hover { background: rgba(255,255,255,.2); }
+
+/* ===== Landscaping services (Sod / Stone Work / Wood Work) ===== */
+.service-block{
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 4vw, 48px);
+  margin: clamp(24px, 5vw, 56px) 0;
+}
+
+.service-block img{
+  flex: 1 1 50%;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  /* your global img border already applies; shadow adds a touch of depth */
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+.service-text{
+  flex: 1 1 50%;
+}
+
+.service-text h3{
+  margin: 0 0 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 2.2vw, 28px);
+  color: var(--fg);
+}
+
+.service-text p{
+  margin: 0 0 14px;
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.service-text .btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* alternate image/text left-right */
+.section-alt .service-block:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 900px){
+  .service-block{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .service-block img{
+    max-height: 320px;
+  }
+  .service-text p{ max-width: none; }
+}
+/* ===== Landscaping services — staggered rows (desktop) ===== */
+@media (min-width: 901px){
+  /* keep alternating left/right that you already have */
+  .section-alt .service-block:nth-of-type(even){
+    flex-direction: row-reverse;
+  }
+
+  /* vertical offsets to create the stagger */
+  .section-alt .service-block:nth-of-type(1){ margin-top: 0; }
+  .section-alt .service-block:nth-of-type(2){ margin-top: 80px; }
+  .section-alt .service-block:nth-of-type(3){ margin-top: 160px; }
+
+  /* give the section extra room at the bottom so the last item has space */
+  .section-alt{ padding-bottom: 160px; }
+}
+
+/* On mobile/tablet, remove offsets (stacks cleanly) */
+@media (max-width: 900px){
+  .section-alt .service-block:nth-of-type(2),
+  .section-alt .service-block:nth-of-type(3){
+    margin-top: clamp(24px, 5vw, 32px); /* normal spacing */
+  }
+  .section-alt{ padding-bottom: 80px; }
+}
