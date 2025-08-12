@@ -25,7 +25,7 @@
 
     <div class="cta-wrap">
       <a class="btn header-pill btn-outline" href="tel:15878304062">(587) 830‑4062</a>
-      <a class="btn header-pill btn-gradient" href="consultation.html">Schedule a Consultation</a>
+      <a class="btn header-pill btn-gradient" href="#contact">Schedule a Consultation</a>
       <button class="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -38,7 +38,7 @@
     <a href="renovations.html">Renovations</a>
     <a href="exteriors.html">Exteriors</a>
     <a href="landscaping.html">Landscaping</a>
-    <a class="btn header-pill btn-gradient" href="consultation.html">Schedule a Consultation</a>
+    <a class="btn header-pill btn-gradient" href="#contact">Schedule a Consultation</a>
     <a class="btn header-pill btn-outline" href="tel:15878304062">(587) 830‑4062</a>
   </div>
 </header>
@@ -95,7 +95,12 @@
     <div class="contact-content">
       <h2 class="contact-title">Get A <span class="emph">Renovation</span><br/>Estimate Today!</h2>
 
-      <form onsubmit="return sendMessage(event)">
+      <form action="https://formsubmit.co/noorprojectsinc@gmail.com" method="POST">
+  <!-- FormSubmit config (keep exactly like this) -->
+  <input type="text" name="_honey" style="display:none">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Website Lead – Noor Projects">
+  <input type="hidden" name="_next" value="thank-you.html">
         <div class="input-shell">
           <input name="name" placeholder="Your Name" required />
         </div>
@@ -184,9 +189,11 @@
 
   <div class="wrap footer-bottom">
     <p>© <span id="year"></span> Noor Projects Inc. All rights reserved.</p>
-    <p class="legal"><a href="#">Privacy</a><span>•</span><a href="#">Terms</a></p>
+    <p class="legal"><a href="privacy.html">Privacy</a><span>•</span><a href="terms.html">Terms</a></p>
   </div>
 </footer>
-
+<script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>

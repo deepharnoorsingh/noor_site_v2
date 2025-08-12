@@ -25,7 +25,7 @@
 
     <div class="cta-wrap">
       <a class="btn header-pill btn-outline" href="tel:15878304062">(587) 830‑4062</a>
-      <a class="btn header-pill btn-gradient" href="consultation.html">Schedule a Consultation</a>
+      <a class="btn header-pill btn-gradient" href="#contatc">Schedule a Consultation</a>
       <button class="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -38,7 +38,7 @@
     <a href="renovations.html">Renovations</a>
     <a href="exteriors.html">Exteriors</a>
     <a href="landscaping.html">Landscaping</a>
-    <a class="btn header-pill btn-gradient" href="consultation.html">Schedule a Consultation</a>
+    <a class="btn header-pill btn-gradient" href="#contact">Schedule a Consultation</a>
     <a class="btn header-pill btn-outline" href="tel:15878304062">(587) 830‑4062</a>
   </div>
 </header>
@@ -61,7 +61,12 @@
       <!-- RIGHT: Quote card -->
       <aside class="quote-card">
         <h3>Get a Quote</h3>
-        <form onsubmit="return sendMessage(event)">
+        <form action="https://formsubmit.co/noorprojectsinc@gmail.com" method="POST">
+  <!-- FormSubmit config (keep exactly like this) -->
+  <input type="text" name="_honey" style="display:none">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Website Lead – Noor Projects">
+  <input type="hidden" name="_next" value="thank-you.html">
           <div class="qinput"><input name="name" placeholder="Name" required></div>
           <div class="qform-grid two">
             <div class="qinput"><input name="phone" placeholder="Phone"></div>
@@ -94,7 +99,7 @@
         <p class="overline">Why homeowners choose us</p>
         <h3>Clear timelines. Clean finishes.</h3>
         <ul class="check">
-          <li><strong>Local expertise in Calgary’s :</strong> our designs and materials are selected for local conditions.</li>
+          <li><strong>Local expertise in Calgary’s climate:</strong> our designs and materials are selected for local conditions.</li>
           <li><strong>Clean, respectful crews:</strong> we treat every job like our own — safe practices, minimal disruption to daily life, and a site left better than we found it.</li>
           <li><strong>Clear communication & planning:</strong> upfront milestones and regular updates so everyone stays on the same page.</li>
           <li><strong>Transparent pricing:</strong> detailed scope and dates before work begins — no surprises.</li>
@@ -310,7 +315,12 @@
     <div class="contact-content">
       <h2 class="contact-title">Start Your <span class="emph">Project</span><br/>Estimate</h2>
 
-      <form onsubmit="return sendMessage(event)">
+      <form action="https://formsubmit.co/noorprojectsinc@gmail.com" method="POST">
+  <!-- FormSubmit config (keep exactly like this) -->
+  <input type="text" name="_honey" style="display:none">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Website Lead – Noor Projects">
+  <input type="hidden" name="_next" value="thank-you.html">
         <div class="input-shell">
           <input name="name" placeholder="Your Name" required />
         </div>
@@ -332,7 +342,7 @@
           <textarea name="message" placeholder="Tell us about your vision, goals, and any requirements..." oninput="countChars(this)"></textarea>
         </div>
 
-        <button class="btn accent" type="submit">Quick Free Quote</button>
+        <button class="qsubmit" type="submit">Quick Free Quote</button>
       </form>
     </div>
 
@@ -419,7 +429,7 @@
 
   <div class="wrap footer-bottom">
     <p>Copyright © <span id="year"></span> 2025 Noor Projects Inc. All rights reserved.</p>
-    <p class="legal"><a href="#">Privacy</a><span>•</span><a href="#">Terms</a></p>
+    <p class="legal"><a href="privacy.html">Privacy</a><span>•</span><a href="terms.html">Terms</a></p>
   </div>
 </footer>
 <script>
@@ -431,5 +441,8 @@
     });
   });
 </script>
+<script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>

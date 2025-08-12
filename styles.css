@@ -1677,3 +1677,10 @@ body.landscaping #about.section-band .about-copy h2::after{
 /* (optional) keep link hover in the green family */
 body.landscaping a:hover{ color:#1c4637; }
 
+/* Ensure hero text is light on dark overlays for inner pages */
+.hero h1,
+.hero .lead,
+.hero .cta .btn { color: #fff; }
+.hero .btn { border-color: rgba(255,255,255,.7); }
+.hero .btn:not(.primary) { background: rgba(255,255,255,.12); color: #fff; }
+.hero .btn:not(.primary):hover { background: rgba(255,255,255,.2); }
