@@ -89,16 +89,40 @@ document.addEventListener('click', function(e){
         // Prefer an existing #status element if present
         const status = document.getElementById('status');
         const message = 'Thanks — we received your request. We’ll contact you shortly.\nIf it’s urgent, call (587) 830‑4062.';
+        let confirm;
         if (status) {
           status.textContent = message;
         } else {
-          const confirm = document.createElement('div');
+          confirm = document.createElement('div');
           confirm.className = 'form-confirm';
           confirm.style.cssText = 'margin-top:12px;font-weight:600;color:var(--fg)';
           confirm.textContent = message;
           form.parentNode.insertBefore(confirm, form.nextSibling);
         }
         form.reset();
+
+        // Auto-fade the confirmation and reset the button after 5s
+        const confirmEl = status || confirm;
+        if (confirmEl) {
+          confirmEl.style.transition = 'opacity .4s ease';
+          confirmEl.style.opacity = '1';
+          setTimeout(()=>{
+            confirmEl.style.opacity = '0';
+            setTimeout(()=>{
+              if (confirmEl !== status) {
+                confirmEl.remove();
+              } else {
+                status.textContent = '';
+                status.style.opacity = '';
+              }
+            }, 400);
+          }, 5000);
+        }
+
+        // Re-enable button and restore original label after fade window
+        setTimeout(()=>{
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText || 'Submit'; }
+        }, 5200);
       } catch(err){
         console.error('Form submit failed:', err);
         alert('Could not send. Please call (587) 830‑4062 or email noorprojectsinc@gmail.com.');
