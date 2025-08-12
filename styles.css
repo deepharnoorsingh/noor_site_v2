@@ -1834,3 +1834,167 @@ body.landscaping a:hover{ color:#1c4637; }
   line-height: 1.6;
   max-width: 38ch;
 }
+.gradient-section {
+  background: linear-gradient(180deg, #245c46, #2e7d5b 60%, #3ba776);
+  color: #fff;
+}
+
+.gradient-section h2,
+.gradient-section h3,
+.gradient-section p {
+  color: #fff;
+}
+
+.gradient-section .why-choose-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-section .why-choose-card h3 {
+  color: #fff;
+}
+
+.gradient-section .why-choose-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+/* Shared green gradient skin */
+.gradient-section{
+  background: linear-gradient(180deg, #245c46, #2e7d5b 60%, #3ba776);
+  color:#fff;
+}
+
+.gradient-section h2,
+.gradient-section h3,
+.gradient-section p{ color:#fff; }
+
+/* apply subtle glass to the cards sitting on the gradient */
+.gradient-section .why-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.28);
+  box-shadow: 0 10px 24px rgba(0,0,0,.16);
+}
+.gradient-section .why-copy{
+  color: color-mix(in srgb, #fff 80%, #000 20%);
+}
+.process .process-steps{
+  margin: 0;
+  padding: clamp(16px, 3vw, 24px);
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.18);
+  backdrop-filter: blur(2px);
+}
+.process .process-steps li{
+  margin: 10px 0;
+  color: #f3f7f4;
+}
+.process .process-steps strong{ color:#fff; }
+/* ===== Landscaping Process Section ===== */
+.process {
+  background: var(--bg); /* your site’s light beige background */
+  padding: clamp(40px, 6vw, 80px) 0;
+}
+
+.process .process-title {
+  text-align: center;
+  margin: 0 0 clamp(22px, 4vw, 36px);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(22px, 3.2vw, 34px);
+  letter-spacing: .2px;
+  color: var(--fg);
+}
+
+/* Light steps card */
+.process .process-steps {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 26px);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.06);
+  color: var(--fg);
+  list-style-position: inside;
+}
+
+.process .process-steps li {
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.process .process-steps strong {
+  color: var(--fg);
+}
+
+/* Bottom callout band with gradient */
+.process .process-cta {
+  max-width: 1180px;
+  margin: clamp(22px, 4vw, 32px) auto 0;
+  padding: clamp(18px, 3vw, 26px);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #245c46, #2e7d5b 60%, #3ba776);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1.4fr auto;
+  gap: 16px;
+  align-items: center;
+  box-shadow: 0 14px 36px rgba(0,0,0,.18);
+}
+
+.process .process-cta h3 {
+  margin: 0 0 6px;
+  font: 800 clamp(18px, 2.6vw, 24px)/1.2 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+.process .process-cta p {
+  margin: 0;
+  color: color-mix(in srgb, #fff 88%, #000 12%);
+}
+
+.process .process-cta .btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: #fff;
+  color: #1e3c2f;
+  font: 700 14px/1 'Montserrat', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.process .process-cta .btn:hover {
+  filter: brightness(.96);
+}
+
+@media (max-width: 800px) {
+  .process .process-cta {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
+/* Light steps card */
+.process .process-steps {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 26px);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.06);
+  color: #1a1a1a; /* main dark text color */
+  list-style-position: inside;
+}
+
+.process .process-steps li {
+  margin: 12px 0;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #1a1a1a; /* ensure visible */
+}
+
+.process .process-steps strong {
+  color: #0f2d20; /* dark green for emphasis */
+}
