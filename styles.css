@@ -1998,3 +1998,938 @@ body.landscaping a:hover{ color:#1c4637; }
 .process .process-steps strong {
   color: #0f2d20; /* dark green for emphasis */
 }
+/* ===== SOD Section Styling - Screenshot Match ===== */
+.sod-benefits {
+  position: relative;
+  padding: clamp(60px, 8vw, 110px) 0;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('images/grass-bg.jpg') center/cover no-repeat;
+  font-family: 'Montserrat', sans-serif; /* matches screenshot font */
+}
+
+.sod-title {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: clamp(26px, 3.4vw, 38px);
+}
+
+.sod-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 14px auto 0;
+  background: #fff;
+  opacity: 0.85;
+}
+
+.sod-intro {
+  max-width: 900px;
+  margin: 15px auto 50px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Grid */
+.sod-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .sod-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .sod-grid { grid-template-columns: 1fr; }
+}
+
+/* Cards */
+.sod-card {
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 24px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.25);
+}
+
+.sod-card h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.sod-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+/* ===== HERO: Lawn (sod.html variant of hero-landing) ===== */
+.hero-lawn .hero-bg::before{
+  /* your grass hero image */
+  background: url('images/grass-hero.jpg') center/cover no-repeat;
+}
+
+.hero-lawn .hero-bg::after{
+  /* darker, even overlay for white text */
+  background: linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.45));
+}
+
+/* Headline scale/weight similar to reference */
+.hero-lawn .hero-heading h1{
+  font-weight: 800;
+  font-size: clamp(34px, 6.5vw, 56px);
+}
+.hero-lawn .hero-heading .lead{
+  max-width: 640px;
+  color: rgba(255,255,255,.92);
+}
+
+/* Right card = solid deep green, rounded, shadow (not glass) */
+.hero-lawn .lawn-card{
+  background: #1f4e3a;                         /* deep green */
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 24px 60px rgba(0,0,0,.28);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+/* small tagline under card title */
+.hero-lawn .lawn-card .lawn-tagline{
+  margin: -4px 0 10px;
+  text-align: center;
+  color: rgba(255,255,255,.85);
+  font: 600 13px/1.2 'Montserrat',sans-serif;
+}
+
+/* Inputs: white fields with subtle dark border */
+.hero-lawn .lawn-card .qinput{
+  background: #fff;
+  border: 2px solid rgba(0,0,0,.55);
+  box-shadow: none;                /* remove blue accent bar inside */
+}
+.hero-lawn .lawn-card .qinput input,
+.hero-lawn .lawn-card .qinput textarea{
+  color: #111;
+}
+.hero-lawn .lawn-card .qinput textarea{ min-height: 110px; }
+
+/* Submit button: orange accent like reference */
+.hero-lawn .lawn-card .qsubmit{
+  background: #f2642a;                           /* orange */
+  box-shadow: 0 10px 26px rgba(0,0,0,.25);
+}
+.hero-lawn .lawn-card .qsubmit:hover{
+  filter: brightness(.96);
+}
+
+/* Tighten grid on small screens so card stacks */
+@media (max-width: 980px){
+  .hero-lawn .hero-grid{ grid-template-columns: 1fr; }
+  .hero-lawn .lawn-card{ justify-self: stretch; }
+}
+/* ===== Sod hero variant (uses your hero-landing) ===== */
+.hero-sod .hero-bg::before{
+  /* Replace with your grass photo path */
+  background: url('images/grass-hero.jpg') center/cover no-repeat;
+}
+
+.hero-sod .hero-bg::after{
+  /* A touch darker than default so white type pops on grass */
+  background: linear-gradient(0deg, rgba(0,0,0,.48), rgba(0,0,0,.48));
+}
+
+/* Optional: make primary CTA green on this page (matches landscaping theme) */
+body.landscaping .hero-sod .btn.primary{
+  background: linear-gradient(180deg, #245c46, #1c4637);
+}
+body.landscaping .hero-sod .btn.primary:hover{
+  filter: brightness(.96);
+}
+/* Quote details styling */
+.quote-details {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.quote-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.quote-details li {
+  margin-bottom: 0.4rem;
+}
+
+.quote-details strong {
+  color: #fff;
+  font-weight: 600;
+}
+.qinput textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.qinput textarea:focus {
+  border-color: #2e7d5b;
+  outline: none;
+  box-shadow: 0 0 5px rgba(46, 125, 91, 0.3);
+}.qinput textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.qinput textarea:focus {
+  border-color: #2e7d5b;
+  outline: none;
+  box-shadow: 0 0 5px rgba(46, 125, 91, 0.3);
+}
+/* Landscaping Hero */
+.hero-landscaping .hero-bg::before {
+  background: url('images/landscaping-hero.jpg') center/cover no-repeat;
+}
+
+.hero-landscaping .hero-bg::after {
+  background: linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.45));
+}
+/* Landscaping hero background */
+.hero-landscaping .hero-bg::before{
+  background: url('images/landscaping-hero.jpg') center/cover no-repeat;
+}
+.hero-landscaping .hero-bg::after{
+  background: linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.45));
+}
+/* ===== Seasonal Lawn Care (sod page) ===== */
+.seasonal-care{
+  background: #ecebea; /* soft neutral band that fits your palette */
+  padding: clamp(48px, 6vw, 84px) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.season-head{
+  text-align: center;
+  margin: 0 0 clamp(22px, 4vw, 36px);
+}
+.season-head h2{
+  font: 800 clamp(22px, 3.4vw, 34px)/1.1 'Montserrat', sans-serif;
+  color: var(--fg);
+  margin: 0 0 6px;
+}
+.season-head p{
+  margin: 0 auto;
+  max-width: 78ch;
+  color: var(--muted);
+  font: 500 16px/1.7 'Roboto', sans-serif;
+}
+
+.season-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 3vw, 28px);
+}
+@media (max-width: 980px){ .season-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .season-grid{ grid-template-columns: 1fr; } }
+
+.season-card{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(18px, 2.6vw, 26px);
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.season-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.10);
+}
+
+.season-icon{
+  width: 62px; height: 62px;
+  margin: 4px auto 12px;
+  display: grid; place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #245c46, #2e7d5b 60%, #3ba776);
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+}
+.season-icon svg{
+  width: 30px; height: 30px; fill: #fff;
+}
+
+.season-card h3{
+  margin: 6px 0 8px;
+  font: 800 18px/1.2 'Montserrat', sans-serif;
+  color: var(--fg);
+}
+.season-card p{
+  margin: 0;
+  color: #333;
+  font: 500 15px/1.65 'Roboto', sans-serif;
+}
+/* ===== Seasonal Lawn Care — polished look & consistent brand ===== */
+.seasonal-care{
+  /* soft band that matches your beige base */
+  background: color-mix(in srgb, var(--bg) 92%, #000 8%);
+  padding: clamp(56px, 7vw, 96px) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.season-head{
+  text-align: center;
+  margin: 0 0 clamp(26px, 4vw, 40px);
+}
+.season-head h2{
+  font: 800 clamp(26px, 3.6vw, 36px)/1.1 'Montserrat', sans-serif;
+  color: var(--fg);
+  margin: 0 0 10px;
+  letter-spacing: .2px;
+}
+.season-head p{
+  margin: 0 auto;
+  max-width: 72ch;
+  color: var(--muted);
+  font: 500 16px/1.65 'Roboto', sans-serif;
+}
+
+/* Grid */
+.season-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(18px, 3vw, 28px);
+}
+@media (max-width: 980px){ .season-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .season-grid{ grid-template-columns: 1fr; } }
+
+/* Cards */
+.season-card{
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: clamp(22px, 2.8vw, 28px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.08);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.season-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(0,0,0,.12);
+  border-color: color-mix(in srgb, var(--border) 60%, #000 40%);
+}
+
+/* Icons — BIG, brand gradient, crisp */
+.season-icon{
+  --g1:#245c46; --g2:#2e7d5b; --g3:#3ba776;
+  width: 78px; height: 78px;
+  margin: 4px auto 14px;
+  border-radius: 20px;
+  display: grid; place-items: center;
+  background: linear-gradient(180deg, var(--g1), var(--g2) 60%, var(--g3));
+  box-shadow: 0 14px 28px rgba(0,0,0,.14), inset 0 0 0 2px rgba(255,255,255,.12);
+}
+.season-icon svg{
+  width: 36px; height: 36px;
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 0; /* leaf/maple use fill; sun path includes strokes */
+}
+
+/* Type inside cards */
+.season-card h3{
+  margin: 8px 0 8px;
+  color: var(--fg);
+  font: 800 clamp(16px, 2.2vw, 20px)/1.2 'Montserrat', sans-serif;
+}
+.season-card p{
+  margin: 0;
+  color: #2b2f36;
+  font: 500 15.5px/1.65 'Roboto', sans-serif;
+}
+
+/* Tighten vertical rhythm on small screens */
+@media (max-width: 640px){
+  .season-icon{ width: 72px; height: 72px; }
+  .season-icon svg{ width: 32px; height: 32px; }
+}
+/* ===== Seasonal Lawn Care — EXACT neutral style ===== */
+.seasonal-care.clean{
+  background: #e3e3e3;                 /* neutral grey band like the reference */
+  padding: clamp(56px, 7vw, 96px) 0;
+}
+
+.seasonal-care.clean .season-head{
+  text-align: center;
+  margin: 0 0 clamp(28px, 4vw, 44px);
+}
+.seasonal-care.clean .season-head h2{
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #111827;                      /* near-black */
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 0 0 10px;
+}
+.seasonal-care.clean .season-head p{
+  margin: 0 auto;
+  max-width: 78ch;
+  color: #374151;                      /* muted dark grey */
+  font: 500 clamp(15px, 1.8vw, 18px)/1.65 'Roboto',sans-serif;
+}
+
+/* 3-up grid */
+.seasonal-care.clean .season-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: clamp(22px, 3vw, 32px);
+  align-items: stretch;
+}
+@media (max-width: 980px){ .seasonal-care.clean .season-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .seasonal-care.clean .season-grid{ grid-template-columns: 1fr; } }
+
+/* Cards: white, large radius, soft shadow */
+.seasonal-care.clean .season-card{
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+  text-align: center;
+  padding: clamp(36px, 4.5vw, 56px) clamp(22px, 3.2vw, 34px);
+}
+
+/* Big season title exactly like screenshot scale */
+.seasonal-care.clean .season-card h3{
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 14px;
+  font-size: clamp(24px, 3vw, 40px);
+}
+
+/* Oversized centered icons (solid black) */
+.seasonal-care.clean .season-icon{
+  width: clamp(96px, 9vw, 128px);
+  height: clamp(96px, 9vw, 128px);
+  margin: 6px auto 18px;
+  display: grid; place-items: center;
+}
+.seasonal-care.clean .season-icon svg{
+  width: 80%; height: 80%;
+  fill: #111; stroke: #111; stroke-width: 1.4;
+}
+
+/* Body copy — centered, readable measure */
+.seasonal-care.clean .season-card p{
+  margin: 0 auto;
+  max-width: 36ch;
+  color: #111827;
+  font: 500 clamp(15px, 1.9vw, 19px)/1.65 'Roboto',sans-serif;
+}
+/* ===== Seasonal Lawn Care — compact, clean, brand‑green icons ===== */
+
+/* 1) Use the site background and a narrower content width */
+.seasonal-care.clean{
+  background: var(--bg);               /* same as rest of page */
+  padding: clamp(36px, 5vw, 64px) 0;   /* shorter band */
+  border: 0;                            /* no band borders */
+}
+.seasonal-care.clean .wrap{
+  max-width: 1040px;                    /* narrower for more side space */
+}
+
+/* 2) Headline/subhead: smaller + lighter */
+.seasonal-care.clean .season-head{
+  text-align: center;
+  margin: 0 0 clamp(16px, 3vw, 24px);
+}
+.seasonal-care.clean .season-head h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;                     /* down from 800 */
+  color: var(--fg);
+  letter-spacing: .15px;
+  font-size: clamp(22px, 3vw, 30px);    /* smaller */
+  margin: 0 0 6px;
+}
+.seasonal-care.clean .season-head p{
+  margin: 0 auto;
+  max-width: 70ch;
+  color: var(--muted);
+  font: 500 clamp(14px, 1.5vw, 16px)/1.6 'Roboto', sans-serif;
+}
+
+/* 3) Grid: a touch tighter */
+.seasonal-care.clean .season-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: clamp(14px, 2.2vw, 22px);
+}
+@media (max-width: 980px){ .seasonal-care.clean .season-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .seasonal-care.clean .season-grid{ grid-template-columns: 1fr; } }
+
+/* 4) Cards: compact padding, softer shadow */
+.seasonal-care.clean .season-card{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(20px, 2.2vw, 26px);
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+/* 5) Card heading: smaller & medium‑bold */
+.seasonal-care.clean .season-card h3{
+  font: 700 clamp(18px, 2.2vw, 22px)/1.2 'Montserrat', sans-serif;
+  color: var(--fg);
+  margin: 0 0 10px;
+}
+
+/* 6) Icons: NO bubbles, brand green, consistent size */
+.seasonal-care.clean .season-icon{
+  width: clamp(64px, 6.5vw, 84px);
+  height: clamp(64px, 6.5vw, 84px);
+  margin: 4px auto 12px;
+  display: grid; place-items: center;
+  background: none !important;          /* kill any previous “bubble” */
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.seasonal-care.clean .season-icon svg{
+  width: 100%; height: 100%;
+  fill: #2e7d5b;                        /* brand green */
+  stroke: #2e7d5b;
+  stroke-width: 1.2;                    /* sun path stays crisp */
+}
+
+/* 7) Body copy: smaller, darker than muted */
+.seasonal-care.clean .season-card p{
+  margin: 0 auto;
+  max-width: 36ch;
+  color: #2a2f36;
+  font: 500 clamp(14px, 1.7vw, 16px)/1.6 'Roboto', sans-serif;
+}/* ===== Seasonal Lawn Care – Light Grey Background, Clean Typography ===== */
+
+.seasonal-care.clean {
+  background: #f5f5f5; /* light grey background */
+  padding: clamp(40px, 5vw, 70px) 0;
+}
+
+.seasonal-care.clean .wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Headline & Subhead */
+.seasonal-care.clean .season-head {
+  text-align: center;
+  margin-bottom: clamp(28px, 4vw, 40px);
+}
+
+.seasonal-care.clean .season-head h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 32px);
+  color: #1f1f1f;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+.seasonal-care.clean .season-head p {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: #444;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+/* Grid layout */
+.seasonal-care.clean .season-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+@media (max-width: 980px) {
+  .seasonal-care.clean .season-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .seasonal-care.clean .season-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card styling */
+.seasonal-care.clean .season-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: clamp(22px, 2.2vw, 28px);
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0e0e0;
+}
+
+/* Icon styling */
+.seasonal-care.clean .season-icon {
+  width: clamp(60px, 6vw, 72px);
+  height: clamp(60px, 6vw, 72px);
+  margin: 0 auto 14px;
+}
+
+.seasonal-care.clean .season-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #2e7d5b; /* brand green */
+}
+
+/* Card heading */
+.seasonal-care.clean .season-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(17px, 2vw, 20px);
+  margin-bottom: 10px;
+  color: #1f1f1f;
+}
+
+/* Card text */
+.seasonal-care.clean .season-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: #444;
+  line-height: 1.6;
+  max-width: 36ch;
+  margin: 0 auto;
+}/* ===== Seasonal Lawn Maintenance Section ===== */
+.seasonal-care {
+  background: #f5f5f5; /* light grey for the whole section */
+  padding: clamp(40px, 5vw, 70px) 0;
+}
+
+.seasonal-care .wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Headline & Subhead */
+.seasonal-care .season-head {
+  text-align: center;
+  margin-bottom: clamp(28px, 4vw, 40px);
+}
+
+.seasonal-care .season-head h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 32px);
+  color: #1f1f1f;
+  margin-bottom: 8px;
+}
+
+.seasonal-care .season-head p {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: #444;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+/* Remove any background box or line from heading */
+.seasonal-care .season-head,
+.seasonal-care .season-head h2,
+.seasonal-care .season-head p {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Grid layout */
+.seasonal-care .season-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+@media (max-width: 980px) {
+  .seasonal-care .season-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .seasonal-care .season-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card styling */
+.seasonal-care .season-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: clamp(22px, 2.2vw, 28px);
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0e0e0;
+}
+
+/* Icon styling */
+.seasonal-care .season-icon svg {
+  width: clamp(60px, 6vw, 72px);
+  height: clamp(60px, 6vw, 72px);
+  fill: #2e7d5b; /* brand green */
+  margin-bottom: 14px;
+}
+
+/* Card heading */
+.seasonal-care .season-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(17px, 2vw, 20px);
+  margin-bottom: 10px;
+  color: #1f1f1f;
+}
+
+/* Card text */
+.seasonal-care .season-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: #444;
+  line-height: 1.6;
+  max-width: 36ch;
+  margin: 0 auto;
+}
+/* ===== Seasonal Lawn Maintenance — portrait cards ===== */
+.seasonal-care{
+  background: #f5f5f5;                    /* whole section light grey */
+  padding: clamp(40px, 5vw, 70px) 0;
+}
+.seasonal-care .wrap{
+  max-width: 1080px;                      /* narrower to add side space */
+  margin: 0 auto;
+}
+
+/* Heading — clean, no background or lines */
+.seasonal-care .season-head{
+  text-align: center;
+  margin: 0 0 clamp(24px, 3.6vw, 36px);
+}
+.seasonal-care .season-head h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 30px);
+  color: #1f1f1f;
+  margin: 0 0 6px;
+}
+.seasonal-care .season-head p{
+  font: 500 clamp(14px, 1.6vw, 16px)/1.6 'Roboto', sans-serif;
+  color: #444;
+  margin: 0 auto;
+  max-width: 70ch;
+}
+
+/* Grid: keep 3 columns but center the narrower cards */
+.seasonal-care .season-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 24px);
+}
+@media (max-width: 980px){ .seasonal-care .season-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .seasonal-care .season-grid{ grid-template-columns: 1fr; } }
+
+/* Portrait cards: height > width */
+.seasonal-care .season-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  max-width: 300px;                       /* narrow */
+  min-height: 380px;                      /* tall */
+  margin: 0 auto;                         /* center within each grid cell */
+
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 22px 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+/* Icons — green, no bubble, consistent size */
+.seasonal-care .season-icon{
+  width: 80px;
+  height: 80px;
+  margin: 6px auto 12px;
+  display: grid; place-items: center;
+}
+.seasonal-care .season-icon svg{
+  width: 100%; height: 100%;
+  fill: #2e7d5b;               /* brand green */
+  stroke: #2e7d5b; stroke-width: 1.2;
+}
+
+/* Titles & copy */
+.seasonal-care .season-card h3{
+  font: 700 20px/1.2 'Montserrat', sans-serif;
+  color: #1f1f1f;
+  margin: 6px 0 8px;
+}
+.seasonal-care .season-card p{
+  font: 500 15px/1.6 'Roboto', sans-serif;
+  color: #2b2f36;
+  max-width: 34ch;
+  margin: 0 auto;
+}
+
+/* Slight tightening on very small screens */
+@media (max-width: 640px){
+  .seasonal-care .season-card{ max-width: 360px; min-height: 360px; }
+  .seasonal-care .season-icon{ width: 72px; height: 72px; }
+  .seasonal-care .season-card h3{ font-size: 19px; }
+  .seasonal-care .season-card p{ font-size: 14.5px; }
+}
+/* === Seasonal icons: black, consistent, properly sized === */
+.seasonal-care .season-icon{
+  width: 104px;              /* bigger icon container */
+  height: 104px;
+  margin: 6px auto 14px;
+  display: grid;
+  place-items: center;
+}
+
+.seasonal-care .season-icon svg{
+  width: 92%;                /* nearly fills the container */
+  height: 92%;
+  display: block;
+  fill: #111 !important;     /* solid black for filled paths (leaf/maple) */
+  stroke: #111 !important;   /* black strokes for the sun */
+  stroke-width: 2;           /* makes sun rays bold enough */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Keep titles and copy tidy next to larger icons */
+.seasonal-care .season-card h3{
+  margin: 4px 0 8px;
+  font-size: 20px;
+}
+.seasonal-care .season-card p{
+  font-size: 15px;
+  max-width: 34ch;
+}
+/* ===== Seasonal Lawn Maintenance — final, clean version ===== */
+
+/* Section band */
+.seasonal-care{
+  background:#f5f5f5;
+  padding: clamp(40px,5vw,72px) 0;
+}
+.seasonal-care .wrap{ max-width: 1080px; margin:0 auto; }
+
+/* Heading */
+.seasonal-care .season-head{
+  text-align:center;
+  margin: 0 0 clamp(22px,3.2vw,34px);
+}
+.seasonal-care .season-head h2{
+  margin:0 0 6px;
+  font: 700 clamp(22px,3vw,30px)/1.15 'Montserrat',sans-serif;
+  color:#1c1f25;
+}
+.seasonal-care .season-head p{
+  margin:0 auto;
+  max-width: 68ch;
+  color:#555;
+  font: 500 clamp(14px,1.6vw,16px)/1.6 'Roboto',sans-serif;
+}
+
+/* Grid */
+.seasonal-care .season-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: clamp(16px,2vw,24px);
+}
+@media (max-width:980px){ .seasonal-care .season-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width:640px){ .seasonal-care .season-grid{ grid-template-columns: 1fr; } }
+
+/* Portrait cards */
+.seasonal-care .season-card{
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  width: 290px; min-height: 420px; margin: 0 auto;            /* portrait */
+  background:#fff; border:1px solid #e6e6e6; border-radius:16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  padding: 22px 20px;
+}
+@media (max-width:640px){ .seasonal-care .season-card{ width: 320px; min-height: 400px; } }
+
+/* ICONS — kill bubbles/gradients and make pure black */
+.seasonal-care .season-icon{
+  width: 96px; height: 96px;
+  margin: 6px auto 12px;
+  display:grid; place-items:center;
+
+  /* hard reset of any old styles */
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+.seasonal-care .season-icon svg{
+  width: 92%; height: 92%; display:block;
+  fill: #111 !important;              /* leaf/maple are fills */
+  stroke: #111 !important;            /* sun rays are strokes */
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Titles + body */
+.seasonal-care .season-card h3{
+  margin: 6px 0 8px;
+  color:#1c1f25;
+  font: 700 20px/1.2 'Montserrat',sans-serif;
+}
+.seasonal-care .season-card p{
+  margin: 0 auto;
+  max-width: 36ch;
+  color:#2b2f36;
+  font: 500 15px/1.6 'Roboto',sans-serif;
+}
+.seasonal-care .season-icon svg {
+  width: auto;
+  height: 75%;   /* smaller height */
+  transform: translateY(-4px); /* nudge upward */
+}/* --- Seasonal icons: bottom-anchored sizing & color --- */
+.season-card .icon{
+  height: 88px;                   /* gives the icon room */
+  display: flex;
+  align-items: flex-end;          /* anchor to bottom */
+  justify-content: center;
+}
+
+.season-card .icon .icon-svg{
+  width: 64px;
+  height: 64px;
+  color: #111;                    /* solid black like your ref */
+  transform-origin: bottom center;
+}
+
+/* If one icon feels too tall, add this helper class to that icon wrapper */
+.season-card .icon.icon-smaller .icon-svg{
+  transform: scale(.88);          /* smaller “from the bottom” */
+}

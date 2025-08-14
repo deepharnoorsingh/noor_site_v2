@@ -62,17 +62,24 @@
       <aside class="quote-card">
         <h3>Get a Quote</h3>
         <form action="https://formsubmit.co/noorprojectsinc@gmail.com" method="POST">
-  <!-- FormSubmit config (keep exactly like this) -->
-  <input type="text" name="_honey" style="display:none">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="New Website Lead – Noor Projects">
-  <input type="hidden" name="_next" value="thank-you.html">
+          <!-- FormSubmit config -->
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Website Lead – Noor Projects">
+          <input type="hidden" name="_next" value="thank-you.html">
+
           <div class="qinput"><input name="name" placeholder="Name" required></div>
           <div class="qform-grid two">
             <div class="qinput"><input name="phone" placeholder="Phone"></div>
             <div class="qinput"><input type="email" name="email" placeholder="Email" required></div>
           </div>
           <div class="qinput"><input name="address" placeholder="Address"></div>
+
+          <!-- New message/inquiry box -->
+          <div class="qinput">
+            <textarea name="message" placeholder="Tell us about your project..." rows="4" required></textarea>
+          </div>
+
           <button class="qsubmit" type="submit">Quick Free Quote</button>
         </form>
       </aside>
