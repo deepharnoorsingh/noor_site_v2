@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stone Work – Noor Projects Inc.</title>
-  <meta name="description" content="Retaining walls, stone patios, and walkways – expert installation for timeless outdoor spaces in Calgary." />
+  <title>Stone Work – Patios, Walkways & Edging | Noor Projects Inc.</title>
+  <meta name="description" content="Custom stone patios, walkways, and edging in Calgary. Proper base prep, clean cuts, polymeric sand finish, and drainage that lasts through freeze–thaw." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <!-- keep the landscaping green accent -->
   <style>:root{ --acc:#245c46; }</style>
 </head>
 <body class="landscaping">
@@ -32,55 +33,306 @@
 </header>
 
 <main>
-  <section class="hero section-full">
+
+  <!-- HERO (same layout as sod; new copy + subject) -->
+  <section class="hero hero-landing section-full hero-stone">
     <div class="hero-bg"></div>
     <div class="wrap">
-      <h1>Stone Work</h1>
-      <p class="lead">Custom retaining walls, stone patios, and durable walkways with proper base and drainage.</p>
-      <p class="cta">
-        <a class="btn primary" href="#contact">Get a Quote</a>
-        <a class="btn" href="landscaping.html">Back to Landscaping</a>
+      <div class="hero-grid">
+        <!-- LEFT -->
+        <div class="hero-heading">
+          <h1>Stone Patios & Walkways </h1>
+          <p class="lead">
+            Clean layouts, durable base prep, tight lines, and a polymeric‑sand finish. 
+            Built to drain properly and survive Calgary’s freeze–thaw cycle without shifting.
+          </p>
+        </div>
+
+        <!-- RIGHT: Quote card (same form) -->
+        <aside class="quote-card">
+          <h3>Get a Quote</h3>
+          <form action="https://formsubmit.co/noorprojectsinc@gmail.com" method="POST">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Stone Work Lead – Noor Projects">
+            <input type="hidden" name="_next" value="thank-you.html">
+
+            <div class="qinput"><input name="name" placeholder="Name" required></div>
+            <div class="qform-grid two">
+              <div class="qinput"><input name="phone" placeholder="Phone"></div>
+              <div class="qinput"><input type="email" name="email" placeholder="Email" required></div>
+            </div>
+            <div class="qinput"><input name="address" placeholder="Address"></div>
+
+            <div class="qinput">
+              <textarea name="message" placeholder="Tell us about your stone work project..." rows="4" required></textarea>
+            </div>
+
+            <button class="qsubmit" type="submit">Quick Free Quote</button>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO (same visual: left image, right copy) -->
+  <section class="intro-sod">
+    <div class="container">
+      <!-- Left image block – swap the image in CSS (see note below) -->
+      <div class="intro-image intro-image--stone"></div>
+
+      <!-- Right text -->
+      <div class="intro-text">
+        <h2>Beautiful Stone Work, Built the Right Way</h2>
+        <p>
+          Noor Projects designs and installs stone patios, walkways, and edging that look sharp and last for years. 
+          We start with proper excavation and a compacted, well‑graded base so your surface drains, stays level, 
+          and resists movement through freeze–thaw. Every cut is precise, and every line is clean.
+        </p>
+        <p>
+          From modern pavers to natural stone, we’ll help you choose the right materials for your style, budget, and use. 
+          We set consistent joint widths and use polymeric sand to lock everything in place for a clean, low‑maintenance finish.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="why-choose">
+  <div class="wrap">
+    <h2>Why Choose Custom Stone Work?</h2>
+    <p class="subtitle">A professionally built stone feature adds:</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-tree"></i></div>
+        <p>Beautiful, durable surfaces that elevate your outdoor space</p>
+      </div>
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+        <p>Long-term value and appeal for your property</p>
+      </div>
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-sync-alt"></i></div>
+        <p>Year-round usability with features like seating walls or fire pits</p>
+      </div>
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-cloud-rain"></i></div>
+        <p>Low-maintenance performance built for Calgary’s climate</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <section class="stone-installation">
+  <div class="wrap">
+    <h2 class="section-title">Custom Stone Work Installation</h2>
+    <p class="section-subtitle">
+      Transform your outdoor space with a professionally designed and installed patio, walkway, or edging tailored to your home.
+    </p>
+
+    <div class="stone-grid">
+      <article class="stone-card">
+        <span class="step-number">1</span>
+        <h3>On-Site Consultation &amp; Planning</h3>
+        <p>
+          We walk the site with you, learn how you’ll use the space, and review grading, drainage, sun exposure, and access.
+          From there, we outline a practical layout and clear scope.
+        </p>
+      </article>
+
+      <article class="stone-card">
+        <span class="step-number">2</span>
+        <h3>Material Selection</h3>
+        <p>
+          Choose from modern pavers or natural stone. We guide durability, texture, and color—and can provide a simple visual to
+          help you picture patterns and borders.
+        </p>
+      </article>
+
+      <article class="stone-card">
+        <span class="step-number">3</span>
+        <h3>Base Prep &amp; Installation</h3>
+        <p>
+          We excavate to spec, install a compacted base in lifts, set accurate slopes, and lay stone with tight lines.
+          Edge restraints and polymeric sand lock everything in.
+        </p>
+      </article>
+
+      <article class="stone-card">
+        <span class="step-number">4</span>
+        <h3>Finish, Walkthrough &amp; Care</h3>
+        <p>
+          We tidy the site, activate joints, and do a final walkthrough. You’ll get care tips and warranty details so your stone work stays sharp season after season.
+        </p>
+      </article>
+    </div>
+
+    <div class="cta-center">
+      <a href="#contact" class="btn primary">Request a Consultation</a>
+    </div>
+  </div>
+</section>
+  <!-- WHY CHOOSE (same 3x2 grid cards; all stone content, no retaining walls) -->
+  <section class="sod-benefits section-full">
+    <div class="wrap">
+      <h2 class="sod-title">Why Homeowners Choose Noor Projects for Stone Work</h2>
+      <p class="sod-intro">
+        Professional stone work starts below the surface. We excavate to the right depth, install and compact the base in lifts,
+        set accurate slopes for drainage, and finish with polymeric sand. The result: crisp lines, smooth transitions, and surfaces
+        that don’t heave or trip you up.
+      </p>
+
+      <div class="sod-grid">
+        <article class="sod-card">
+          <h3>Rock‑Solid Base Preparation</h3>
+          <p>
+            We dig to spec and install a compacted road‑base in layers. That foundation keeps patios and paths flat, helps water move,
+            and prevents the wavy, uneven look that shows up when base is rushed.
+          </p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Clean Layouts & Tight Lines</h3>
+          <p>
+            Your stonework should read crisp from every angle. We use string lines, spacers, and detailed cutting so bond lines stay straight
+            and curves look intentional—not jagged.
+          </p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Freeze–Thaw Resilience</h3>
+          <p>
+            Calgary’s winters are tough on hardscapes. We set proper slopes, install edge restraints, and lock joints with polymeric sand
+            so your patio resists movement and your walkway doesn’t open up.
+          </p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Drainage That Works</h3>
+          <p>
+            Standing water shortens the life of any surface. We grade the base and surface to shed water and integrate simple solutions
+            (like channel placement or minor swales) where needed.
+          </p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Right Material, Right Place</h3>
+          <p>
+            We’ll guide you on paver thickness for traffic, slip‑resistant textures for steps, and colors that complement your home.
+            Natural stone or concrete pavers—done with purpose.
+          </p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Low‑Maintenance Finish</h3>
+          <p>
+            We set and activate polymeric sand correctly to reduce weeds and keep joints tidy. You get a cleaner look and less maintenance
+            through the season.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3‑CARD SECTION (same layout; renamed to stone services) -->
+  <section class="seasonal-care">
+    <div class="wrap">
+      <div class="season-head">
+        <h2>Stone Work Services</h2>
+        <p>Custom‑built for daily use, clean transitions, and a finish that ties your whole yard together.</p>
+      </div>
+
+      <div class="season-grid">
+        <article class="season-card">
+          <h3>Patios</h3>
+          <p>
+            Outdoor living spaces with accurate slope, tight joints, and durable edge restraints. Choose modern lines or a natural stone feel—
+            all finished with polymeric sand for a clean, long‑lasting result.
+          </p>
+        </article>
+
+        <article class="season-card">
+          <h3>Walkways & Pathways</h3>
+          <p>
+            Smooth, safe routes from the front walk to the backyard. We handle curves, transitions, and grade changes so your pathway looks
+            intentional and stays comfortable to walk on.
+          </p>
+        </article>
+
+        <article class="season-card">
+          <h3>Steps & Edging</h3>
+          <p>
+            Define garden beds and control your edges with stone borders, or add solid, slip‑resistant steps for grade changes. 
+            Each detail is installed to line up perfectly with your main surfaces.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTY MANAGER / HOMEOWNER BAND (same rectangle gradient module) -->
+  <section class="pm-band">
+    <div class="wrap pm-content">
+      <h2>Built for Daily Use — and Built to Last</h2>
+      <p class="pm-sub">
+        Whether it’s a simple garden path or a full backyard patio, we keep installation clean, fast, and to standard.
+        One crew, one schedule, and stone work that looks sharp season after season.
+      </p>
+
+      <ul class="pm-list">
+        <li>Excavation and base installed in compacted lifts</li>
+        <li>Consistent joint widths and accurate cuts</li>
+        <li>Polymeric sand activation for a tidy, low‑maintenance finish</li>
+      </ul>
+
+      <p class="pm-note">Ask about bundled pricing when pairing patios, walkways, and edging</p>
+
+      <h3 class="pm-cta-title">Ready to Design Your Space?</h3>
+      <p class="pm-sub">
+        Tell us how you use your yard and we’ll recommend patterns, borders, and stone that fit your budget and style.
       </p>
     </div>
   </section>
 
-  <section class="section-alt">
-    <div class="wrap">
-      <h2>Options We Offer</h2>
-      <p>Built on a compacted base with clean lines:</p>
-      <ul class="check">
-        <li>Retaining walls (block or natural)</li>
-        <li>Stone patios and pads</li>
-        <li>Walkways & pathways</li>
-      </ul>
-    </div>
-  </section>
-
+  <!-- CONTACT (same layout, stone headline) -->
   <section id="contact" class="section-band contact-modern">
     <div class="wrap contact-grid">
       <div class="contact-text">
-        <h2>Start Your Project Estimate</h2>
-        <p>Tell us a bit about your project and we’ll get back to you with a plan and timeline.</p>
+        <h2>Professional Stone Work in Calgary</h2>
+        <p>
+          Great stone work starts with the base. We excavate properly, compact in layers, and set the right slope so water moves away and
+          your surfaces stay put.
+        </p>
+        <p>
+          We cut cleanly, align patterns, and finish with polymeric sand to keep joints neat. The result is a patio or walkway that looks
+          deliberate and performs through every season.
+        </p>
+        <p>
+          From first sketch to final sweep, our team builds to standard and leaves your space tidy. 
+          Tell us your vision — we’ll make it work beautifully.
+        </p>
       </div>
+
       <div class="contact-content">
-        <h2 class="contact-title">Request a <span class="emph">Free</span><br/>Quote</h2>
+        <h2 class="contact-title">Start Your <span class="emph">Stone Work</span><br/>Quote Now!</h2>
         <form action="https://formsubmit.co/noorprojectsinc@gmail.com" method="POST">
           <input type="text" name="_honey" style="display:none">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="New Website Lead – Noor Projects">
           <input type="hidden" name="_next" value="thank-you.html">
+
           <div class="input-shell"><input name="name" placeholder="Your Name" required /></div>
           <div class="form-grid two">
             <div class="input-shell"><input name="phone" placeholder="Phone" /></div>
             <div class="input-shell"><input type="email" name="email" placeholder="Email" required /></div>
           </div>
           <div class="input-shell"><input name="address" placeholder="Your Address" /></div>
-          <div class="input-shell"><textarea name="message" placeholder="Your message (optional)" oninput="countChars(this)"></textarea></div>
+          <div class="input-shell"><textarea name="message" placeholder="Your message (optional)"></textarea></div>
           <button class="btn accent" type="submit">Quick Free Quote</button>
         </form>
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer section-full" style="background: linear-gradient(90deg, #245c46 0%, #3ba776 100%);">
@@ -121,6 +373,12 @@
     <p class="legal"><a href="privacy.html">Privacy</a><span>•</span><a href="terms.html">Terms</a></p>
   </div>
 </footer>
+
 <script src="script.js"></script>
+
+<!-- Optional CSS hooks for hero/intro image (add to styles.css if you want different photos) 
+.hero-stone .hero-bg::before { background-image: url('images/stone-hero.jpg'); }
+.intro-image--stone { background-image: url('images/stone-intro.jpg'); }
+-->
 </body>
 </html>
