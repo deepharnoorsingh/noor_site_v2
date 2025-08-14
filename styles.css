@@ -4026,3 +4026,311 @@ body.landscaping .hero-sod .btn.primary:hover{
   font-size: 1rem;
   line-height: 1.5;
 }
+.fence-repair {
+  background-color: #f8f8f8; /* light grey background */
+  padding: 60px 0;
+}
+
+.repair-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.repair-image {
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  border-radius: 6px;
+}
+
+.repair-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.repair-text p, .repair-text ul {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.repair-text ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.fence-types {
+  background-color: #f8f8f8; /* light grey background */
+  padding: 60px 0;
+}
+
+.fence-types h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  border-bottom: 3px solid var(--acc);
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.fence-types .subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.fence-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.fence-list li {
+  margin-bottom: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.fence-list strong {
+  font-weight: 700;
+}
+
+.fence-types .note {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+}
+.fence-types {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+}
+
+.fence-types .wrap {
+  max-width: 1000px; /* wider than default */
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.fence-types h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  border-bottom: 3px solid var(--acc);
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.fence-types .subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.fence-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.fence-list li {
+  margin-bottom: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.fence-list strong {
+  font-weight: 700;
+}
+
+.fence-types .note {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 20px;
+}
+.fence-services {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+}
+
+.fence-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.fence-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.fence-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.fence-text h3 {
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.fence-text p {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.fence-text ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.fence-text ul li {
+  margin-bottom: 8px;
+}
+
+.fence-text strong {
+  font-weight: 700;
+}
+
+.fence-text .note {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .fence-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fence-services {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+}
+
+.fence-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.fence-column h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.fence-column .subtitle {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.fence-column p {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.fence-column ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.fence-column ul li {
+  margin-bottom: 8px;
+}
+
+.fence-column strong {
+  font-weight: 700;
+}
+
+.fence-column .note {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .fence-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.fence-column h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.fence-column h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--acc, #245c46); /* Uses your landscaping green */
+  margin-top: 8px;
+}
+.fence-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fence-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.fence-column:not(:last-child) {
+  border-right: 1px solid #ddd; /* light vertical line */
+  padding-right: 30px;
+}
+
+.fence-column h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.fence-column h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--acc, #245c46);
+  margin-top: 6px;
+}
+
+.fence-column p,
+.fence-column li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.fence-column ul {
+  list-style: disc;
+  padding-left: 20px;
+}

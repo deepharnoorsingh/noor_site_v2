@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wood Work – Noor Projects Inc.</title>
-  <meta name="description" content="Custom fences, decks, pergolas, and raised garden beds – built to last and enhance your outdoor space." />
+  <title>Wood Work – Fences & Decks | Noor Projects Inc.</title>
+  <meta name="description" content="Custom fences and decks in Calgary. Solid structure, clean lines, proper footings and fasteners, and finishes that stand up to Calgary’s seasons." />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <!-- keep the landscaping green accent -->
   <style>:root{ --acc:#245c46; }</style>
 </head>
 <body class="landscaping">
@@ -32,55 +33,279 @@
 </header>
 
 <main>
-  <section class="hero section-full">
+
+  <!-- HERO -->
+  <section class="hero hero-landing section-full hero-wood">
     <div class="hero-bg"></div>
     <div class="wrap">
-      <h1>Wood Work</h1>
-      <p class="lead">Fences, decks, pergolas, and raised garden beds — planned for your yard and built to last.</p>
-      <p class="cta">
-        <a class="btn primary" href="#contact">Get a Quote</a>
-        <a class="btn" href="landscaping.html">Back to Landscaping</a>
+      <div class="hero-grid">
+        <!-- LEFT -->
+        <div class="hero-heading">
+          <h1>Custom Fences & Decks</h1>
+          <p class="lead">
+            Straight runs, plumb posts, solid footings, and clean details. We build fences and decks that look sharp on day one
+            and hold their shape through Calgary’s freeze–thaw.
+          </p>
+        </div>
+
+        <!-- RIGHT: Quote card -->
+        <aside class="quote-card">
+          <h3>Get a Quote</h3>
+          <form action="https://formsubmit.co/noorprojectsinc@gmail.com" method="POST">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Wood Work Lead – Noor Projects">
+            <input type="hidden" name="_next" value="thank-you.html">
+
+            <div class="qinput"><input name="name" placeholder="Name" required></div>
+            <div class="qform-grid two">
+              <div class="qinput"><input name="phone" placeholder="Phone"></div>
+              <div class="qinput"><input type="email" name="email" placeholder="Email" required></div>
+            </div>
+            <div class="qinput"><input name="address" placeholder="Address"></div>
+
+            <div class="qinput">
+              <textarea name="message" placeholder="Tell us about your fence or deck..." rows="4" required></textarea>
+            </div>
+
+            <button class="qsubmit" type="submit">Quick Free Quote</button>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO (left image, right copy) -->
+  <section class="intro-sod">
+    <div class="container">
+      <div class="intro-image intro-image--wood"></div>
+      <div class="intro-text">
+        <h2>Wood Work Done Right — Strong, Straight, and Clean</h2>
+        <p>
+          Noor Projects builds fences and decks that are engineered for Calgary’s climate and finished with clean details.
+          We set accurate post locations, pour proper footings, and anchor everything square and true before any boards go on.
+        </p>
+        <p>
+          From privacy fences to multi‑level decks, we help you choose the right lumber, hardware, and finishes for your style and budget.
+          The result is a structure that feels solid underfoot, reads clean from the curb, and performs year after year.
+        </p>
+      </div>
+    </div>
+  </section>
+  <<section class="fence-services">
+  <div class="wrap fence-grid">
+    <!-- Left: Fence Types -->
+    <div class="fence-column">
+      <h2>Fence Types We Build</h2>
+      <p class="subtitle">We offer a range of fence styles to match your needs and budget:</p>
+      <ul>
+        <li><strong>Cedar Privacy Fences</strong> – Natural look with long-lasting durability</li>
+        <li><strong>Pressure-Treated Wood Fences</strong> – Affordable and functional</li>
+        <li><strong>Horizontal Slat Fences</strong> – Modern curb appeal with clean lines</li>
+        <li><strong>Lattice-Top Fences</strong> – Style and ventilation</li>
+        <li><strong>Good Neighbor Fences</strong> – Shared boundary designs for neighborly installs</li>
+        <li><strong>Custom Gates & Entry Arches</strong></li>
+      </ul>
+      <p class="note">All fences are constructed with galvanized nails, level alignment, and proper footings for stability.</p>
+    </div>
+
+    <!-- Right: Fence Replacement -->
+    <div class="fence-column">
+      <h2>Fence Replacement & Repairs</h2>
+      <p>Time to replace that leaning, faded, or broken fence? We provide complete solutions to restore the look, strength, and security of your property.</p>
+      <ul>
+        <li>Full fence tear-outs and replacements</li>
+        <li>Single-panel or post repairs</li>
+        <li>Reinforcement for storm-damaged fences</li>
+        <li>Fence height extensions or code adjustments</li>
+      </ul>
+      <p class="note">Fast turnaround on replacements with quality results you can trust.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- WHY CHOOSE -->
+  <section class="why-choose">
+    <div class="wrap">
+      <h2>Why Choose Custom Wood Work?</h2>
+      <p class="subtitle">A professionally built fence or deck gives you:</p>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon">🧭</div>
+          <p>Clean, straight lines and consistent spacing that elevate your yard</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">🛡️</div>
+          <p>Solid structure with proper footings, fasteners, and framing</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">🏡</div>
+          <p>More usable outdoor living space with privacy and comfort</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">🧰</div>
+          <p>Smart material choices and coatings to handle Calgary’s seasons</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALLATION STEPS (fence & deck) -->
+  <section class="stone-installation">
+    <div class="wrap">
+      <h2 class="section-title">Fence & Deck Installation Process</h2>
+      <p class="section-subtitle">
+        A clean, safe build from the ground up — precise layout, solid structure, and a finish that looks intentional.
+      </p>
+
+      <div class="stone-grid">
+        <article class="stone-card">
+          <span class="step-number">1</span>
+          <h3>On‑Site Consultation &amp; Layout</h3>
+          <p>
+            We confirm property lines and utilities, measure grades, and map clear layouts for posts, spans, stairs, and gates.
+            From there, we provide a practical design and scope.
+          </p>
+        </article>
+
+        <article class="stone-card">
+          <span class="step-number">2</span>
+          <h3>Materials &amp; Hardware</h3>
+          <p>
+            Pressure‑treated, cedar, or composite options. We’ll recommend fasteners, brackets, posts, and coatings that match
+            your budget and maintenance goals.
+          </p>
+        </article>
+
+        <article class="stone-card">
+          <span class="step-number">3</span>
+          <h3>Footings, Framing &amp; Structure</h3>
+          <p>
+            Posts set plumb in proper footings; beams and joists installed to spec with hangers and hardware. We keep everything square,
+            level, and secure before surface boards go on.
+          </p>
+        </article>
+
+        <article class="stone-card">
+          <span class="step-number">4</span>
+          <h3>Boards, Railings &amp; Finish</h3>
+          <p>
+            Tight board spacing, clean cuts, and safe, sturdy railings. We sand edges, align fasteners, and review coatings or
+            stain options for long‑term protection.
+          </p>
+        </article>
+      </div>
+
+      <div class="cta-center">
+        <a href="#contact" class="btn primary">Request a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS (repurposed sod-benefits grid) -->
+  <section class="sod-benefits section-full">
+    <div class="wrap">
+      <h2 class="sod-title">Why Homeowners Choose Noor Projects for Wood Work</h2>
+      <p class="sod-intro">
+        We build with accuracy and care — straight runs, proper footings, correct spans, and clean details that make your fence
+        or deck look intentional and feel solid.
+      </p>
+
+      <div class="sod-grid">
+        <article class="sod-card">
+          <h3>Straight, Plumb, Level</h3>
+          <p>We set posts plumb, keep runs straight, and laser‑check elevations so everything reads crisp and square.</p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Correct Structure</h3>
+          <p>Footings, beams, joists, hangers, and spans are installed to spec for a solid structure that feels great underfoot.</p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Clean Details</h3>
+          <p>Hidden or aligned fasteners, trimmed ends, safe edges, and tidy gate hardware finish the job right.</p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Material Guidance</h3>
+          <p>Cedar vs. treated vs. composite — we’ll help you pick boards, railings, and coatings that fit your maintenance plan.</p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Privacy & Usability</h3>
+          <p>Add screens, seating, lighting, or steps to make your space comfortable day and night.</p>
+        </article>
+
+        <article class="sod-card">
+          <h3>Built for Calgary</h3>
+          <p>Hardware and finishes chosen to handle sun, wind, and freeze–thaw cycles without loosening or warping.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTY MANAGER / HOMEOWNER BAND -->
+  <section class="pm-band">
+    <div class="wrap pm-content">
+      <h2>Built Solid — From Footings to Fasteners</h2>
+      <p class="pm-sub">
+        We keep builds clean, fast, and to standard. One crew, one schedule, and wood work that looks sharp season after season.
+      </p>
+
+      <ul class="pm-list">
+        <li>Accurate layout with utility checks and property line awareness</li>
+        <li>Proper concrete footings, spans, and hardware to spec</li>
+        <li>Clean boards, tidy edges, safe railings, and aligned fasteners</li>
+      </ul>
+
+      <p class="pm-note">Ask about bundled pricing when pairing decks, fences, and screens</p>
+
+      <h3 class="pm-cta-title">Ready to Build Your Outdoor Space?</h3>
+      <p class="pm-sub">
+        Tell us your goals — privacy, shade, seating, or storage — and we’ll design a practical, great‑looking solution.
       </p>
     </div>
   </section>
 
-  <section class="section-alt">
-    <div class="wrap">
-      <h2>Popular Builds</h2>
-      <p>Thoughtful designs using durable materials:</p>
-      <ul class="check">
-        <li>Privacy and decorative fencing</li>
-        <li>Decks and pergolas</li>
-        <li>Raised garden beds and edging</li>
-      </ul>
-    </div>
-  </section>
-
+  <!-- CONTACT -->
   <section id="contact" class="section-band contact-modern">
     <div class="wrap contact-grid">
       <div class="contact-text">
-        <h2>Start Your Project Estimate</h2>
-        <p>Tell us a bit about your project and we’ll get back to you with a plan and timeline.</p>
+        <h2>Professional Wood Work in Calgary</h2>
+        <p>
+          Strong structure starts below the surface — proper footings, correct spans, and hardware that won’t loosen.
+        </p>
+        <p>
+          We keep posts plumb, boards aligned, and railings solid. You get a fence or deck that looks clean and feels secure.
+        </p>
+        <p>
+          From first layout to final sweep, our team builds to standard and leaves your space tidy and ready to use.
+        </p>
       </div>
+
       <div class="contact-content">
-        <h2 class="contact-title">Request a <span class="emph">Free</span><br/>Quote</h2>
+        <h2 class="contact-title">Start Your <span class="emph">Wood </span><br/>Project Now!</h2>
         <form action="https://formsubmit.co/noorprojectsinc@gmail.com" method="POST">
           <input type="text" name="_honey" style="display:none">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="New Website Lead – Noor Projects">
           <input type="hidden" name="_next" value="thank-you.html">
+
           <div class="input-shell"><input name="name" placeholder="Your Name" required /></div>
           <div class="form-grid two">
             <div class="input-shell"><input name="phone" placeholder="Phone" /></div>
             <div class="input-shell"><input type="email" name="email" placeholder="Email" required /></div>
           </div>
           <div class="input-shell"><input name="address" placeholder="Your Address" /></div>
-          <div class="input-shell"><textarea name="message" placeholder="Your message (optional)" oninput="countChars(this)"></textarea></div>
+          <div class="input-shell"><textarea name="message" placeholder="Your message (optional)"></textarea></div>
           <button class="btn accent" type="submit">Quick Free Quote</button>
         </form>
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer section-full" style="background: linear-gradient(90deg, #245c46 0%, #3ba776 100%);">
@@ -121,6 +346,12 @@
     <p class="legal"><a href="privacy.html">Privacy</a><span>•</span><a href="terms.html">Terms</a></p>
   </div>
 </footer>
+
 <script src="script.js"></script>
+
+<!-- Optional CSS hooks for hero/intro image (add to styles.css)
+.hero-wood .hero-bg::before { background-image: url('images/wood-hero.jpg'); }
+.intro-image--wood { background-image: url('images/wood-intro.jpg'); }
+-->
 </body>
 </html>
